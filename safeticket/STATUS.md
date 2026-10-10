@@ -8,7 +8,7 @@ Updated 2026-10-10.
 - Support decision policy with uncertainty, incident, and multiple-request review gates.
 - Conservative billing-document adjudication for explicit receipt and invoice requests.
 - Input validation and fail-closed malformed-evidence handling.
-- 51 automated tests passing.
+- 58 automated tests passing.
 - Frozen-output policy replay and matched Kev/Laya benchmark artifacts.
 - Kev attribution, provenance, and non-original-training disclosure.
 
@@ -258,7 +258,7 @@ remains shadow-only because the raw adapter still misses one challenge case.
 
 Post-change blind validation on the 100-case support fixture scored 99/100,
 with 79 automatic routes and zero automatic-route errors; all 20 required
-reviews were caught. The full regression suite now passes 51/51.
+reviews were caught. The full regression suite now passes 58/58.
 
 ## Re-verification, 2026-10-10
 
@@ -389,6 +389,37 @@ ticket): the 100-case raw score is now 95/100 instead of the 96/100 recorded ear
 and the guard still returns 100/100. Recorded result files, fixtures and training data
 were relabelled with the new name only; their contents are otherwise unchanged.
 
-Unit tests: 51 pass. These remain authored synthetic fixtures. The earlier
+Code review fixes (2026-10-10). A review of `support_v2.py` and `serve.py` found two
+defects, both reproduced on the live API before any change:
+
+1. The model's urgency score was acted on only when keywords also matched, and the keyword
+   gates had holes. An "ordinary forgotten password" exemption switched incident detection
+   off whenever a ticket contained "reset", "forgot" or "wrong"; a "fraud denied" list
+   ("legitimate", "not fraud") could cancel a real takeover; and wordings such as "hacker",
+   "did not make this purchase", "not mine", "don't recognise" and "used my card" were not
+   recognised. On 10 compromise or fraud tickets, 8 were auto-routed although the model gave
+   most of them an urgency of 0.5 to 0.87.
+2. In safe mode, an unstable option order discarded the policy's decision and applied a
+   weaker keyword list, so a safety review (for example "a fraud charge appeared on my
+   statement") could be turned into an automatic route to billing.
+
+Fixes: a shared third-party and "did not do it" cue list now disables the password
+exemption and widens incident detection, strong takeover wording can no longer be cancelled
+by a denial phrase, and an unstable option order can no longer override a safety review
+(`incident_signal` is shared by the policy and the server).
+
+Measured on a new 60-ticket probe (`benchmarks/support_incident_probe_v1.json`: 40
+compromise or fraud tickets that should go to review, 20 ordinary look-alikes that should
+route) written before the change: 28 of 40 incidents were caught before and 40 of 40 after,
+with none of the 20 ordinary tickets escalated. No other set changed (blind 99/100,
+expanded 199/200, holdout 24/24, fresh 24/24, adversarial 12/12, challenge 12/12, 0 wrong
+automatic routes; over-escalation check unchanged at 6 of 44). An urgency-score gate was
+tried at 0.5, 0.6 and 0.7 and rejected: it added up to 8 unnecessary reviews on the 200-case
+set and caught nothing the keyword fixes did not. Two cue phrases ("never asked for",
+"strange activity") were added after seeing which probe tickets were still missed, so the
+probe is now partly tuned. The option-order recovery path is covered by unit tests only;
+instability cannot be forced on the live model.
+
+Unit tests: 58 pass. These remain authored synthetic fixtures. The earlier
 200/200 expanded claim was not reproducible; b031 scores below the model
 probability threshold and is reviewed.

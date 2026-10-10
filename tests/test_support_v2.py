@@ -1,3 +1,4 @@
+import re
 import unittest
 from safeticket.support_v2 import decide
 
@@ -167,3 +168,37 @@ class SupportV2Tests(unittest.TestCase):
         ]:
             result = decide(evidence(), ticket)
             self.assertEqual((result['action'], result['team']), ('route', 'billing'), ticket)
+
+    def test_compromise_and_fraud_wording_goes_to_review_even_with_low_urgency(self):
+        tickets = [
+            'Someone reset my password and now I cannot get in.',
+            'My password was changed by a hacker; please reset it.',
+            'A stranger changed my password, I forgot the new one.',
+            'Someone logged into my account and the password is wrong now.',
+            'I am the legitimate owner and someone hacked my account.',
+            'This is not fraud on my side, but someone took over my account.',
+            'I received a password reset email I never asked for and now I cannot log in.',
+            'Strange activity on my account and the password no longer works.',
+            'Please send a receipt. I did not make this purchase.',
+            'I do not recognise this charge on my statement.',
+            'Someone used my card for this receipt.',
+        ]
+        for ticket in tickets:
+            team = 'billing' if re.search(r'receipt|charge|statement', ticket) else 'access'
+            data = evidence(p=.85, urgent=.1)
+            data['team']['probabilities'] = {k: (.85 if k == team else .0375) for k in ('billing', 'shipping', 'returns', 'access', 'review')}
+            self.assertEqual(decide(data, ticket)['action'], 'human_review', ticket)
+
+    def test_ordinary_account_and_payment_requests_still_route(self):
+        cases = [
+            ('I forgot my password, can you help me reset it?', 'access'),
+            ('I typed the wrong password too many times and I am locked out.', 'access'),
+            ('I authorized the payment and need a receipt for my records.', 'billing'),
+            ('The payment was legitimate, I just need a receipt.', 'billing'),
+            ('Where is my order? It has not arrived.', 'shipping'),
+        ]
+        for ticket, team in cases:
+            data = evidence(p=.85, urgent=.1)
+            data['team']['probabilities'] = {k: (.85 if k == team else .0375) for k in ('billing', 'shipping', 'returns', 'access', 'review')}
+            result = decide(data, ticket)
+            self.assertEqual((result['action'], result['team']), ('route', team), ticket)

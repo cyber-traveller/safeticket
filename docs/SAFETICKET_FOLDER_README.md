@@ -39,7 +39,7 @@ synthetic data, not production evidence.
 - The independent Qwen adapter is shadow-only; its raw model is not ready to
   replace the live backend.
 - Latency on the blind set: about 277 ms median in fast mode, 480-530 ms in safe
-  mode. 51 unit tests pass.
+  mode. 58 unit tests pass.
 - Earlier claims of 200/200 (expanded) and 100/100 (blind) were not reproducible.
 
 Details: `safeticket/README.md`, `safeticket/STATUS.md`, `SAFETICKET_PROGRESS.md`, and

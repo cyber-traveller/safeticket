@@ -154,6 +154,9 @@ production evidence.
 - On 44 plain single-intent tickets written for an over-escalation check, 38 were routed to the right team,
   6 were sent to review unnecessarily, and none went to a wrong team. Six tickets that genuinely need review
   were all caught.
+- On a separate 60-ticket probe of compromise and fraud wordings (40 that need review, 20 ordinary look-alikes),
+  all 40 were sent to review and none of the 20 ordinary tickets was escalated. Before a fix in the same release,
+  12 of the 40 were being auto-routed. The probe is partly tuned on its own failures.
 - Latency on the blind set: about 277 ms median in `fast` mode and 480 to 530 ms in `safe` mode.
 - The independent adapter remains shadow-only. Its raw model scores 22/24 on validation and 11/12 on test
   (24/24 and 12/12 with the guard) and cannot replace the live backend yet.
@@ -172,8 +175,9 @@ full evidence is in `outputs/safeticket-scorecard.md`, `outputs/safeticket-bench
   routing. A neutral labelled set is not finished.
 - **No independently trained model.** Decisions depend on the Kev 0.8B backend. SafeTicket's contribution is the
   policy, the safeguards, and the harness.
-- **Keyword rules have blind spots.** Several safeguards are text patterns. Other ways of saying "I didn't
-  authorize this" can be missed, and some plain tickets are sent to review unnecessarily (6 of 44 in the
+- **Keyword rules have blind spots.** Several safeguards are text patterns. A review of the policy found
+  that compromise and fraud wording was being missed; that is fixed, but other phrasings can still be
+  missed, and some plain tickets are sent to review unnecessarily (6 of 44 in the
   check above).
 - **No head-to-head claim.** Comparisons with other systems in [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md) ran
   under SafeTicket's own policy on small authored sets and favour its setup. They do not show that it is better.
@@ -183,7 +187,7 @@ full evidence is in `outputs/safeticket-scorecard.md`, `outputs/safeticket-bench
 ## Development
 
 ```bash
-python -m unittest tests/test_*.py        # 51 unit tests; no model server needed
+python -m unittest tests/test_*.py        # 58 unit tests; no model server needed
 ```
 
 Benchmarks need the backend and SafeTicket running (see Quick start):

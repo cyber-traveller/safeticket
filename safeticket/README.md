@@ -81,7 +81,7 @@ not production evidence.
   and 11/12 test (guarded: 24/24 and 12/12) and is not ready to replace the live
   backend. See `STATUS.md` for all adapter versions.
 - Fast mode is about 277 ms median; safe mode is about 480-530 ms.
-- 51 unit tests pass.
+- 58 unit tests pass.
 
 Earlier claims of 200/200 (expanded) and 100/100 (blind) could not be reproduced.
 Details and the full evidence log are in `STATUS.md`.

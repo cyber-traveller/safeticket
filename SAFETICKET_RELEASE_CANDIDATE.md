@@ -6,7 +6,7 @@ Date: 2026-10-10
 
 ## Current evidence
 
-- Full regression suite: 51/51 passing.
+- Full regression suite: 58/58 passing.
 - Fresh support suite: 24/24 correct, zero automatic-route errors, 9/9
   required reviews caught.
 - Holdout v2: 24/24, zero automatic-route errors, 9/9 required reviews caught
@@ -51,6 +51,9 @@ Date: 2026-10-10
   shipping. This is the safe direction and is not being tuned away.
 - The rules added on 2026-10-10 are keyword patterns; some single-intent tickets
   that mention two similar actions may be sent to review unnecessarily.
+- A code review (2026-10-10) found and fixed two safety defects: compromise and fraud wording that
+  was auto-routed, and an unstable option order overriding a safety review. Details and measurements are
+  in `safeticket/STATUS.md`. The new probe set is partly tuned.
 - An over-escalation check found 6 of 44 plain single-intent tickets sent to review
   unnecessarily (0 to a wrong team) and one unauthorized-charge ticket auto-routed;
   the latter is fixed (negated authorization is now an incident signal).

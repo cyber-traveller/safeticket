@@ -115,7 +115,7 @@ returns, and access.
   SafeTicket and 269 ms for the shadow path; shadow p95 was approximately 359 ms. A
   2026-10-10 re-run with four concurrent workers measured about 492 ms and
   901 ms median, which is not comparable with those figures.
-- Regression suite currently passes 51/51 tests.
+- Regression suite currently passes 58/58 tests.
 
 These fixtures are authored synthetic cases. They demonstrate tested behavior,
 not universal model superiority or production accuracy.

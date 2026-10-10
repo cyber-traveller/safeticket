@@ -12,7 +12,7 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel, Field, field_validator
-from safeticket.support_v2 import QUESTIONS, THRESHOLD, MARGIN, VERSION, decide
+from safeticket.support_v2 import QUESTIONS, THRESHOLD, MARGIN, VERSION, decide, incident_signal
 from safeticket.banking_taxonomy import classify as classify_banking, legacy_team
 
 BACKEND_URL = os.environ.get("SAFETICKET_BACKEND_URL", "http://127.0.0.1:8008").rstrip("/")
@@ -119,12 +119,7 @@ def support_decision(request: SupportRequest):
     if CONSISTENCY_CHECK:
         robustness = _check_option_stability(request.ticket)
         if not robustness.get("argmax_stable", False):
-            recovered_team = _recover_clear_injection_route(request.ticket)
-            decision = (
-                {"action": "route", "team": recovered_team, "reason": "option_order_instability_filtered"}
-                if recovered_team
-                else {"action": "human_review", "team": None, "reason": "option_order_instability"}
-            )
+            decision = _decision_after_instability(decision, request.ticket)
     return {"decision": decision, "evidence": result,
             "robustness": robustness,
             "policy": {"version": VERSION, "threshold": THRESHOLD, "minimum_margin": MARGIN, "calibrated_on_customer_data": False,
@@ -181,8 +176,29 @@ def _check_option_stability(ticket: str) -> dict[str, Any]:
             "spread": result.get("spread"), "permutations": CONSISTENCY_PERMUTATIONS}
 
 
+# Review reasons that an unstable option order must never turn back into an automatic route.
+_SAFETY_REVIEW_REASONS = {"possible_security_or_payment_incident", "multiple_unresolved_requests"}
+
+
+def _decision_after_instability(decision: dict[str, Any], ticket: str) -> dict[str, Any]:
+    """Combine the policy decision with an unstable option-order check.
+
+    A safety review from the policy stands. Otherwise the ticket goes to review
+    unless it is an explicit single-intent request that can be recovered.
+    """
+    reason = str(decision.get("reason", ""))
+    if decision.get("action") == "human_review" and (reason in _SAFETY_REVIEW_REASONS or reason.startswith("invalid")):
+        return decision
+    recovered_team = _recover_clear_injection_route(ticket)
+    if recovered_team:
+        return {"action": "route", "team": recovered_team, "reason": "option_order_instability_filtered"}
+    return {"action": "human_review", "team": None, "reason": "option_order_instability"}
+
+
 def _recover_clear_injection_route(ticket: str) -> str | None:
     """Recover only an explicit single-intent route from unstable options."""
+    if incident_signal(ticket):
+        return None
     has_injection = bool(re.search(r"\b(?:override|ignore|select|probability|pretend|output|choose)\b", ticket, re.I))
     if re.search(r"\b(?:unauthori[sz]ed|hacked|takeover|stolen|stole my account|intruder|stranger|changed by someone else|changed (?:my )?(?:email|recovery|phone))\b", ticket, re.I):
         return None

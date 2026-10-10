@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.egg-info/
+.DS_Store
+# Model weights, upstream checkouts and environments live under work/; only the
+# independent-model scripts, data and recorded evaluation results are tracked.
+/work/*
+!/work/safeticket-independent/
+/work/safeticket-independent/*
+!/work/safeticket-independent/scripts/
+!/work/safeticket-independent/data/
+!/work/safeticket-independent/*.json

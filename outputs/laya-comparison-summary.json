@@ -1,0 +1,85 @@
+{
+  "summaries": {
+    "kev": {
+      "total": 24,
+      "raw_correct": 17,
+      "policy_correct": 24,
+      "automatic_routes": 15,
+      "automatic_errors": 0,
+      "required_reviews": 9,
+      "required_reviews_caught": 9,
+      "unnecessary_reviews": 0,
+      "diagnostic_median_ms": 78.6858125065919
+    },
+    "english": {
+      "total": 24,
+      "raw_correct": 14,
+      "policy_correct": 17,
+      "automatic_routes": 10,
+      "automatic_errors": 2,
+      "required_reviews": 9,
+      "required_reviews_caught": 9,
+      "unnecessary_reviews": 5,
+      "diagnostic_median_ms": 176.33650000789203
+    },
+    "typed-decisions": {
+      "total": 24,
+      "raw_correct": 14,
+      "policy_correct": 15,
+      "automatic_routes": 6,
+      "automatic_errors": 0,
+      "required_reviews": 9,
+      "required_reviews_caught": 9,
+      "unnecessary_reviews": 9,
+      "diagnostic_median_ms": 179.20379150018562
+    }
+  },
+  "paired_policy_accuracy_difference": {
+    "english": {
+      "safeticket_minus_laya": 0.2916666666666667,
+      "bootstrap_95_percent_interval": [
+        0.125,
+        0.5
+      ]
+    },
+    "typed-decisions": {
+      "safeticket_minus_laya": 0.375,
+      "bootstrap_95_percent_interval": [
+        0.20833333333333334,
+        0.5833333333333334
+      ]
+    }
+  },
+  "raw_routing_at_matched_coverage": {
+    "kev": {
+      "6": {
+        "routes": 6,
+        "errors": 0
+      },
+      "12": {
+        "routes": 12,
+        "errors": 1
+      }
+    },
+    "english": {
+      "6": {
+        "routes": 6,
+        "errors": 2
+      },
+      "12": {
+        "routes": 12,
+        "errors": 3
+      }
+    },
+    "typed-decisions": {
+      "6": {
+        "routes": 6,
+        "errors": 0
+      },
+      "12": {
+        "routes": 12,
+        "errors": 3
+      }
+    }
+  }
+}

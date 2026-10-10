@@ -1,0 +1,130 @@
+{
+  "fixtures": {
+    "support_holdout_v2": {
+      "correct": 24,
+      "total": 24,
+      "automatic_routes": 15,
+      "automatic_errors": 0,
+      "required_reviews": 9,
+      "required_reviews_caught": 9,
+      "unnecessary_reviews": 0
+    },
+    "support_adversarial_v1": {
+      "correct": 12,
+      "total": 12,
+      "automatic_routes": 8,
+      "automatic_errors": 0,
+      "required_reviews": 4,
+      "required_reviews_caught": 4,
+      "unnecessary_reviews": 0
+    },
+    "independent_adapter_validation": {
+      "correct": 22,
+      "total": 24
+    },
+    "independent_adapter_adversarial": {
+      "correct": 11,
+      "total": 12
+    },
+    "independent_guarded_validation": {
+      "correct": 24,
+      "total": 24
+    },
+    "independent_guarded_adversarial": {
+      "correct": 12,
+      "total": 12
+    },
+    "open_alternative_support_challenge": {
+      "correct": 3,
+      "total": 12,
+      "accuracy": 0.25
+    }
+  },
+  "comparators": {
+    "live_safeticket_policy": {
+      "holdout": "24/24",
+      "adversarial": "12/12",
+      "automatic_errors_holdout": 0
+    },
+    "independent_safeticket_adapter": {
+      "validation": "22/24",
+      "adversarial": "11/12"
+    },
+    "independent_safeticket_guarded_adapter": {
+      "validation": "24/24",
+      "adversarial": "12/12"
+    },
+    "open_alternative": {
+      "challenge": "3/12"
+    },
+    "jevos": {
+      "support_correct": 20,
+      "support_total": 24,
+      "support_automatic_errors": 3,
+      "support_reviews_caught": 7,
+      "support_reviews_total": 9,
+      "review_cases_fully_correct": 14,
+      "review_cases_total": 18,
+      "review_individual_correct": 50,
+      "review_individual_total": 54
+    },
+    "laya": "See outputs/combined-benchmark.json; Laya English and typed-decisions are evaluated on the original 24-case support fixture."
+  },
+  "independent_adapter_versions": [
+    {
+      "adapter": "Qwen2.5-0.5B v0.1 (gate adapter)",
+      "validation_raw": "22/24",
+      "validation_guarded": "24/24",
+      "test_raw": "11/12",
+      "test_guarded": "12/12"
+    },
+    {
+      "adapter": "Qwen2.5-0.5B v0.2",
+      "validation_raw": "18/24",
+      "validation_guarded": "22/24",
+      "test_raw": "10/12",
+      "test_guarded": "11/12"
+    },
+    {
+      "adapter": "Qwen2.5-0.5B v0.3",
+      "validation_raw": "13/24",
+      "validation_guarded": "18/24",
+      "test_raw": "8/12",
+      "test_guarded": "11/12"
+    },
+    {
+      "adapter": "Qwen2.5-1.5B v0.1",
+      "validation_raw": "18/24",
+      "validation_guarded": "22/24",
+      "test_raw": "8/12",
+      "test_guarded": "11/12"
+    },
+    {
+      "adapter": "Qwen2.5-1.5B v0.2 (shadow server)",
+      "validation_raw": "21/24",
+      "validation_guarded": "24/24",
+      "test_raw": "12/12",
+      "test_guarded": "12/12"
+    },
+    {
+      "adapter": "Qwen2.5-1.5B v0.3-safety",
+      "validation_raw": "23/24",
+      "validation_guarded": "24/24",
+      "test_raw": "11/12",
+      "test_guarded": "12/12"
+    },
+    {
+      "adapter": "Qwen2.5-1.5B v0.4-safety-1e",
+      "validation_raw": "18/24",
+      "validation_guarded": "21/24",
+      "test_raw": "9/12",
+      "test_guarded": "12/12"
+    }
+  ],
+  "gate": {
+    "live_policy_passes_current_safety_gate": true,
+    "independent_adapter_ready_to_replace_live": false,
+    "independent_guarded_path_passes_current_fixtures": true
+  },
+  "limitations": "Authored synthetic fixtures, different model artifacts and runtimes, no production data, and no general superiority claim. The live SafeTicket policy still uses Kev weights."
+}

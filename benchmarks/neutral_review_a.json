@@ -1,0 +1,7 @@
+{
+  "queue": "neutral_review_queue_v1.json",
+  "reviewer": "A",
+  "independent": true,
+  "labels": {},
+  "instructions": "Fill one label for each case ID using NEUTRAL_REVIEW_FORM.md. Do not inspect SafeTicket predictions."
+}

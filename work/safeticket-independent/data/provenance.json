@@ -1,0 +1,14 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "base_model_license": "Apache-2.0",
+  "training_sources": [
+    "benchmarks/support_cases.json",
+    "benchmarks/support_fresh.json",
+    "authored_templates in this script"
+  ],
+  "reserved_evaluation_sources": [
+    "benchmarks/support_holdout_v2.json",
+    "benchmarks/support_adversarial_v1.json"
+  ],
+  "labeling": "authored local labels; no Kev predictions used as labels"
+}

@@ -1,0 +1,7 @@
+SafeTicket source files in this directory are original project code unless a file
+states otherwise. The active model backend is the separately distributed Kev
+project, Copyright 2026 Jared Palmer, licensed under Apache-2.0:
+https://github.com/jaredpalmer/kev
+
+SafeTicket does not include Kev source code or model weights. Preserve upstream
+licenses and notices if the backend or upstream code is redistributed.

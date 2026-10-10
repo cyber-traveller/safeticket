@@ -1,0 +1,13 @@
+{
+  "model": "work/alternatives/open-alternative-jev/models/qwen2.5-0.5b-instruct",
+  "backend": "transformers-cpu",
+  "status": "passed",
+  "decisions": {
+    "category": {"choice": "bug", "confidence": 0.5391},
+    "urgency": {"choice": "medium", "confidence": 0.4360},
+    "escalate": {"choice": "yes", "confidence": 0.5775},
+    "sentiment": {"choice": "happy", "confidence": 0.8564}
+  },
+  "latency_ms": 1877,
+  "limitations": "Single local smoke test; not a quality benchmark. The model and library remain isolated from the live SafeTicket API."
+}

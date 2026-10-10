@@ -1,0 +1,1625 @@
+{
+  "measured_at": "2026-10-10T15:13:42.344031+00:00",
+  "fixture_sha256": "12f880155d049607e66b4ae76f6ece1868154202888d1724ea094259640d4c85",
+  "method": "Frozen synthetic holdout through SafeTicket support endpoint; labels scored after inference.",
+  "summary": {
+    "correct": 24,
+    "total": 24,
+    "automatic_routes": 15,
+    "automatic_errors": 0,
+    "required_reviews": 9,
+    "required_reviews_caught": 9,
+    "unnecessary_reviews": 0
+  },
+  "rows": [
+    {
+      "id": "h01",
+      "expected": "billing",
+      "predicted": "billing",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "billing",
+          "reason": "clear_billing_document_request"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "billing",
+              "confidence": 0.7116,
+              "probabilities": {
+                "billing": 0.7693,
+                "shipping": 0.0076,
+                "returns": 0.0127,
+                "access": 0.0014,
+                "review": 0.209
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.3917
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.3565
+            }
+          },
+          "usage": {
+            "input_tokens": 205,
+            "output_tokens": 128
+          },
+          "latency_ms": 116.3,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.07389999999999997,
+            "shipping": 0.0011000000000000003,
+            "returns": 0.0072000000000000015,
+            "access": 0.0002000000000000001,
+            "review": 0.06760000000000002
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h02",
+      "expected": "billing",
+      "predicted": "billing",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "billing",
+          "reason": "clear_billing_document_request"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "review",
+              "confidence": 0.3718,
+              "probabilities": {
+                "billing": 0.2702,
+                "shipping": 0.1032,
+                "returns": 0.1234,
+                "access": 0.0057,
+                "review": 0.4975
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.2851
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.3353
+            }
+          },
+          "usage": {
+            "input_tokens": 214,
+            "output_tokens": 129
+          },
+          "latency_ms": 76.5,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.039100000000000024,
+            "shipping": 0.0392,
+            "returns": 0.016299999999999995,
+            "access": 0.00020000000000000052,
+            "review": 0.015900000000000025
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h03",
+      "expected": "shipping",
+      "predicted": "shipping",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "shipping",
+          "reason": "clear_single_intent_shipping_request"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "shipping",
+              "confidence": 0.8462,
+              "probabilities": {
+                "billing": 0.0007,
+                "shipping": 0.8769,
+                "returns": 0.0048,
+                "access": 0.0008,
+                "review": 0.1167
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.2498
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.2993
+            }
+          },
+          "usage": {
+            "input_tokens": 210,
+            "output_tokens": 129
+          },
+          "latency_ms": 76.4,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.0004000000000000001,
+            "shipping": 0.0615,
+            "returns": 0.0033,
+            "access": 0.00019999999999999998,
+            "review": 0.0577
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h04",
+      "expected": "shipping",
+      "predicted": "shipping",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "shipping",
+          "reason": "clear_single_intent_shipping_request"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "shipping",
+              "confidence": 0.8164,
+              "probabilities": {
+                "billing": 0.001,
+                "shipping": 0.8531,
+                "returns": 0.0058,
+                "access": 0.0012,
+                "review": 0.1389
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.2836
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.3186
+            }
+          },
+          "usage": {
+            "input_tokens": 208,
+            "output_tokens": 128
+          },
+          "latency_ms": 74.9,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.0002999999999999999,
+            "shipping": 0.04849999999999999,
+            "returns": 0.0039000000000000007,
+            "access": 0.0,
+            "review": 0.044300000000000006
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h05",
+      "expected": "returns",
+      "predicted": "returns",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "returns",
+          "reason": "clear_single_intent_returns_request"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "returns",
+              "confidence": 0.8709,
+              "probabilities": {
+                "billing": 0.0032,
+                "shipping": 0.0084,
+                "returns": 0.8967,
+                "access": 0.0005,
+                "review": 0.0912
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.2477
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.2824
+            }
+          },
+          "usage": {
+            "input_tokens": 209,
+            "output_tokens": 129
+          },
+          "latency_ms": 74.2,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.0007999999999999999,
+            "shipping": 0.0002999999999999999,
+            "returns": 0.04250000000000009,
+            "access": 0.00019999999999999998,
+            "review": 0.04119999999999999
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h06",
+      "expected": "returns",
+      "predicted": "returns",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "returns",
+          "reason": "eligibility_and_routing_agree"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "returns",
+              "confidence": 0.8929,
+              "probabilities": {
+                "billing": 0.0026,
+                "shipping": 0.0126,
+                "returns": 0.9143,
+                "access": 0.0006,
+                "review": 0.0699
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.2769
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.3896
+            }
+          },
+          "usage": {
+            "input_tokens": 208,
+            "output_tokens": 129
+          },
+          "latency_ms": 73.9,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.0002000000000000001,
+            "shipping": 0.0008999999999999998,
+            "returns": 0.02969999999999995,
+            "access": 0.0,
+            "review": 0.028999999999999998
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h07",
+      "expected": "access",
+      "predicted": "access",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "access",
+          "reason": "eligibility_and_routing_agree"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "access",
+              "confidence": 0.8873,
+              "probabilities": {
+                "billing": 0.0007,
+                "shipping": 0.0017,
+                "returns": 0.0029,
+                "access": 0.9098,
+                "review": 0.0848
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.7009
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.3723
+            }
+          },
+          "usage": {
+            "input_tokens": 212,
+            "output_tokens": 129
+          },
+          "latency_ms": 74.3,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.00030000000000000003,
+            "shipping": 0.0,
+            "returns": 0.0002000000000000001,
+            "access": 0.03400000000000003,
+            "review": 0.033600000000000005
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h08",
+      "expected": "access",
+      "predicted": "access",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "access",
+          "reason": "clear_single_intent_access_request"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "access",
+              "confidence": 0.694,
+              "probabilities": {
+                "billing": 0.0019,
+                "shipping": 0.0075,
+                "returns": 0.008,
+                "access": 0.7552,
+                "review": 0.2274
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.3588
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.3209
+            }
+          },
+          "usage": {
+            "input_tokens": 214,
+            "output_tokens": 127
+          },
+          "latency_ms": 74.5,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.00010000000000000005,
+            "shipping": 0.0018999999999999998,
+            "returns": 0.001599999999999999,
+            "access": 0.0403,
+            "review": 0.040500000000000036
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h09",
+      "expected": "review",
+      "predicted": "review",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "human_review",
+          "team": null,
+          "reason": "insufficient_or_conflicting_evidence"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "review",
+              "confidence": 0.8928,
+              "probabilities": {
+                "billing": 0.0064,
+                "shipping": 0.0342,
+                "returns": 0.0373,
+                "access": 0.0079,
+                "review": 0.9142
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.5664
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.4925
+            }
+          },
+          "usage": {
+            "input_tokens": 200,
+            "output_tokens": 129
+          },
+          "latency_ms": 69.3,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.0007000000000000001,
+            "shipping": 0.010700000000000001,
+            "returns": 0.004700000000000003,
+            "access": 0.0015000000000000005,
+            "review": 0.008099999999999996
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h10",
+      "expected": "review",
+      "predicted": "review",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "human_review",
+          "team": null,
+          "reason": "insufficient_or_conflicting_evidence"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "review",
+              "confidence": 0.7961,
+              "probabilities": {
+                "billing": 0.0239,
+                "shipping": 0.0475,
+                "returns": 0.0621,
+                "access": 0.0296,
+                "review": 0.8369
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.1173
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.1536
+            }
+          },
+          "usage": {
+            "input_tokens": 202,
+            "output_tokens": 129
+          },
+          "latency_ms": 68.7,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.00040000000000000105,
+            "shipping": 0.010700000000000001,
+            "returns": 0.0034000000000000002,
+            "access": 0.00010000000000000286,
+            "review": 0.014600000000000057
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h11",
+      "expected": "review",
+      "predicted": "review",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "human_review",
+          "team": null,
+          "reason": "multiple_unresolved_requests"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "access",
+              "confidence": 0.6617,
+              "probabilities": {
+                "billing": 0.0961,
+                "shipping": 0.004,
+                "returns": 0.0033,
+                "access": 0.7294,
+                "review": 0.1673
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.5241
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.3896
+            }
+          },
+          "usage": {
+            "input_tokens": 208,
+            "output_tokens": 128
+          },
+          "latency_ms": 72.8,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.015299999999999994,
+            "shipping": 0.0015,
+            "returns": 0.0005,
+            "access": 0.0243000000000001,
+            "review": 0.009899999999999992
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h12",
+      "expected": "review",
+      "predicted": "review",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "human_review",
+          "team": null,
+          "reason": "multiple_unresolved_requests"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "returns",
+              "confidence": 0.6292,
+              "probabilities": {
+                "billing": 0.0031,
+                "shipping": 0.0715,
+                "returns": 0.7034,
+                "access": 0.0009,
+                "review": 0.2211
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.2566
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.4879
+            }
+          },
+          "usage": {
+            "input_tokens": 213,
+            "output_tokens": 129
+          },
+          "latency_ms": 75.0,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.0010999999999999998,
+            "shipping": 0.0441,
+            "returns": 0.15700000000000003,
+            "access": 0.0002999999999999999,
+            "review": 0.11150000000000002
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h13",
+      "expected": "review",
+      "predicted": "review",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "human_review",
+          "team": null,
+          "reason": "possible_security_or_payment_incident"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "review",
+              "confidence": 0.7366,
+              "probabilities": {
+                "billing": 0.011,
+                "shipping": 0.0279,
+                "returns": 0.0306,
+                "access": 0.1412,
+                "review": 0.7893
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.6717
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.3516
+            }
+          },
+          "usage": {
+            "input_tokens": 211,
+            "output_tokens": 128
+          },
+          "latency_ms": 74.4,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.000700000000000001,
+            "shipping": 0.009900000000000003,
+            "returns": 0.0024999999999999988,
+            "access": 0.027999999999999997,
+            "review": 0.03959999999999997
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h14",
+      "expected": "review",
+      "predicted": "review",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "human_review",
+          "team": null,
+          "reason": "possible_security_or_payment_incident"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "billing",
+              "confidence": 0.4921,
+              "probabilities": {
+                "billing": 0.5937,
+                "shipping": 0.0254,
+                "returns": 0.0135,
+                "access": 0.0041,
+                "review": 0.3633
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.6557
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.2869
+            }
+          },
+          "usage": {
+            "input_tokens": 207,
+            "output_tokens": 129
+          },
+          "latency_ms": 73.7,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.058699999999999974,
+            "shipping": 0.013499999999999998,
+            "returns": 0.0011000000000000003,
+            "access": 0.0012000000000000005,
+            "review": 0.044999999999999984
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h15",
+      "expected": "review",
+      "predicted": "review",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "human_review",
+          "team": null,
+          "reason": "possible_security_or_payment_incident"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "review",
+              "confidence": 0.4063,
+              "probabilities": {
+                "billing": 0.0169,
+                "shipping": 0.0345,
+                "returns": 0.0278,
+                "access": 0.3958,
+                "review": 0.5251
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.7402
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.2961
+            }
+          },
+          "usage": {
+            "input_tokens": 207,
+            "output_tokens": 129
+          },
+          "latency_ms": 73.7,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.021400000000000002,
+            "shipping": 0.008800000000000002,
+            "returns": 0.0011000000000000003,
+            "access": 0.056999999999999995,
+            "review": 0.043300000000000005
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h16",
+      "expected": "review",
+      "predicted": "review",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "human_review",
+          "team": null,
+          "reason": "option_order_instability"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "returns",
+              "confidence": 0.4089,
+              "probabilities": {
+                "billing": 0.1059,
+                "shipping": 0.0253,
+                "returns": 0.5271,
+                "access": 0.002,
+                "review": 0.3397
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.2926
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.4794
+            }
+          },
+          "usage": {
+            "input_tokens": 209,
+            "output_tokens": 128
+          },
+          "latency_ms": 74.0,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": false,
+          "spread": {
+            "billing": 0.1184,
+            "shipping": 0.007099999999999999,
+            "returns": 0.1708,
+            "access": 9.999999999999983e-05,
+            "review": 0.05940000000000001
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h17",
+      "expected": "billing",
+      "predicted": "billing",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "billing",
+          "reason": "clear_billing_document_request"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "billing",
+              "confidence": 0.3328,
+              "probabilities": {
+                "billing": 0.4662,
+                "shipping": 0.0333,
+                "returns": 0.0327,
+                "access": 0.007,
+                "review": 0.4608
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.262
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.2794
+            }
+          },
+          "usage": {
+            "input_tokens": 216,
+            "output_tokens": 127
+          },
+          "latency_ms": 73.6,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.020399999999999974,
+            "shipping": 0.009800000000000003,
+            "returns": 0.0206,
+            "access": 0.0005000000000000004,
+            "review": 0.030799999999999994
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h18",
+      "expected": "shipping",
+      "predicted": "shipping",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "shipping",
+          "reason": "resolved_access_issue_leaves_delivery_request"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "access",
+              "confidence": 0.5237,
+              "probabilities": {
+                "billing": 0.0048,
+                "shipping": 0.1157,
+                "returns": 0.0222,
+                "access": 0.619,
+                "review": 0.2383
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.3721
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.3261
+            }
+          },
+          "usage": {
+            "input_tokens": 208,
+            "output_tokens": 128
+          },
+          "latency_ms": 72.7,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.0027,
+            "shipping": 0.009399999999999992,
+            "returns": 0.0137,
+            "access": 0.06679999999999997,
+            "review": 0.04099999999999998
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h19",
+      "expected": "access",
+      "predicted": "access",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "access",
+          "reason": "eligibility_and_routing_agree"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "access",
+              "confidence": 0.4474,
+              "probabilities": {
+                "billing": 0.0511,
+                "shipping": 0.158,
+                "returns": 0.0272,
+                "access": 0.558,
+                "review": 0.2058
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.242
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.3749
+            }
+          },
+          "usage": {
+            "input_tokens": 210,
+            "output_tokens": 126
+          },
+          "latency_ms": 73.5,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.0059000000000000025,
+            "shipping": 0.0674,
+            "returns": 0.016500000000000004,
+            "access": 0.04069999999999996,
+            "review": 0.0040999999999999925
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h20",
+      "expected": "returns",
+      "predicted": "returns",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "returns",
+          "reason": "clear_single_intent_returns_request"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "returns",
+              "confidence": 0.7696,
+              "probabilities": {
+                "billing": 0.0018,
+                "shipping": 0.0332,
+                "returns": 0.8157,
+                "access": 0.0005,
+                "review": 0.1488
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.2072
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.366
+            }
+          },
+          "usage": {
+            "input_tokens": 209,
+            "output_tokens": 128
+          },
+          "latency_ms": 73.6,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.00010000000000000005,
+            "shipping": 0.0026000000000000016,
+            "returns": 0.04520000000000002,
+            "access": 0.00019999999999999998,
+            "review": 0.04780000000000001
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h21",
+      "expected": "billing",
+      "predicted": "billing",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "billing",
+          "reason": "clear_billing_document_request"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "billing",
+              "confidence": 0.6421,
+              "probabilities": {
+                "billing": 0.7137,
+                "shipping": 0.0156,
+                "returns": 0.0067,
+                "access": 0.0137,
+                "review": 0.2504
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.3481
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.2562
+            }
+          },
+          "usage": {
+            "input_tokens": 209,
+            "output_tokens": 129
+          },
+          "latency_ms": 74.2,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.025599999999999956,
+            "shipping": 0.0058,
+            "returns": 0.0007000000000000001,
+            "access": 0.0034999999999999996,
+            "review": 0.017100000000000004
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h22",
+      "expected": "shipping",
+      "predicted": "shipping",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "shipping",
+          "reason": "eligibility_and_routing_agree"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "shipping",
+              "confidence": 0.6869,
+              "probabilities": {
+                "billing": 0.0026,
+                "shipping": 0.7495,
+                "returns": 0.0403,
+                "access": 0.0019,
+                "review": 0.2057
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.1936
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.39
+            }
+          },
+          "usage": {
+            "input_tokens": 210,
+            "output_tokens": 127
+          },
+          "latency_ms": 74.2,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.0004000000000000002,
+            "shipping": 0.09860000000000002,
+            "returns": 0.026499999999999996,
+            "access": 0.00019999999999999987,
+            "review": 0.07150000000000001
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h23",
+      "expected": "review",
+      "predicted": "review",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "human_review",
+          "team": null,
+          "reason": "possible_security_or_payment_incident"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "review",
+              "confidence": 0.4562,
+              "probabilities": {
+                "billing": 0.2303,
+                "shipping": 0.0405,
+                "returns": 0.0303,
+                "access": 0.134,
+                "review": 0.565
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.5911
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.3242
+            }
+          },
+          "usage": {
+            "input_tokens": 211,
+            "output_tokens": 127
+          },
+          "latency_ms": 74.3,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.015600000000000003,
+            "shipping": 0.013300000000000003,
+            "returns": 0.006699999999999998,
+            "access": 0.017400000000000013,
+            "review": 0.03950000000000009
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    },
+    {
+      "id": "h24",
+      "expected": "returns",
+      "predicted": "returns",
+      "correct": true,
+      "response": {
+        "decision": {
+          "action": "route",
+          "team": "returns",
+          "reason": "clear_single_intent_returns_request"
+        },
+        "evidence": {
+          "model": "safeticket-baseline",
+          "answers": {
+            "team": {
+              "type": "choice",
+              "choice": "returns",
+              "confidence": 0.7453,
+              "probabilities": {
+                "billing": 0.0082,
+                "shipping": 0.0199,
+                "returns": 0.7962,
+                "access": 0.0019,
+                "review": 0.1737
+              }
+            },
+            "urgent": {
+              "type": "noul",
+              "noul": 0.2174
+            },
+            "multiple": {
+              "type": "noul",
+              "noul": 0.2613
+            }
+          },
+          "usage": {
+            "input_tokens": 213,
+            "output_tokens": 129
+          },
+          "latency_ms": 74.4,
+          "safeticket": {
+            "backend": "jaredpalmer/kev-0.8b@v1.0",
+            "status": "integration-baseline",
+            "independent_training": false
+          }
+        },
+        "robustness": {
+          "enabled": true,
+          "argmax_stable": true,
+          "spread": {
+            "billing": 0.0027999999999999987,
+            "shipping": 0.0034999999999999996,
+            "returns": 0.06820000000000004,
+            "access": 0.0008000000000000001,
+            "review": 0.0683
+          },
+          "permutations": 2
+        },
+        "policy": {
+          "version": "support-v2",
+          "threshold": 0.55,
+          "minimum_margin": 0.25,
+          "calibrated_on_customer_data": false,
+          "mode": "safe"
+        }
+      }
+    }
+  ],
+  "limitations": "Synthetic authored holdout; not production data and not evidence of general model superiority."
+}

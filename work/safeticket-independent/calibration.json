@@ -1,0 +1,44 @@
+{
+  "validation_raw": {
+    "accuracy": 0.9166666666666666,
+    "brier": 0.09022996931330853,
+    "ece": 0.06687964967647089,
+    "count": 24
+  },
+  "validation_calibrated": {
+    "accuracy": 0.9166666666666666,
+    "brier": 0.08820921894201013,
+    "ece": 0.07959317446681351,
+    "count": 24
+  },
+  "test_raw": {
+    "accuracy": 0.9166666666666666,
+    "brier": 0.1668547855803961,
+    "ece": 0.09471809172887055,
+    "count": 12
+  },
+  "test_calibrated": {
+    "accuracy": 0.9166666666666666,
+    "brier": 0.1635838945875855,
+    "ece": 0.09696877684737105,
+    "count": 12
+  },
+  "temperature": 0.7,
+  "label_token_ids": {
+    "billing": [
+      38637
+    ],
+    "shipping": [
+      26508
+    ],
+    "returns": [
+      4216
+    ],
+    "access": [
+      5211
+    ],
+    "review": [
+      19417
+    ]
+  }
+}

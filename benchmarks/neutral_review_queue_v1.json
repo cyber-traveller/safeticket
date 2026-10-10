@@ -1,0 +1,21 @@
+{
+  "status": "draft_pending_two_reviewers",
+  "source": "SafeTicket-authored-neutral-queue",
+  "cases": [
+    {"id": "n001", "text": "I do not recognize this card purchase.", "proposed_team": "review", "proposed_human_review": true},
+    {"id": "n002", "text": "Please send me a receipt for yesterday's purchase.", "proposed_team": "billing", "proposed_human_review": false},
+    {"id": "n003", "text": "My replacement card has not arrived yet.", "proposed_team": "shipping", "proposed_human_review": false},
+    {"id": "n004", "text": "I forgot my sign-in password and need to reset it.", "proposed_team": "access", "proposed_human_review": false},
+    {"id": "n005", "text": "The jacket does not fit and I want to return it.", "proposed_team": "returns", "proposed_human_review": false},
+    {"id": "n006", "text": "Can I cancel a transfer that I just submitted?", "proposed_team": "review", "proposed_human_review": true},
+    {"id": "n007", "text": "The exchange rate on my cash withdrawal looks wrong.", "proposed_team": "billing", "proposed_human_review": false},
+    {"id": "n008", "text": "Someone changed the recovery phone number on my account.", "proposed_team": "review", "proposed_human_review": true},
+    {"id": "n009", "text": "Why is my top-up still pending?", "proposed_team": "billing", "proposed_human_review": false},
+    {"id": "n010", "text": "Can this card be used in another country?", "proposed_team": "review", "proposed_human_review": true},
+    {"id": "n011", "text": "My parcel tracking has not updated for three days.", "proposed_team": "shipping", "proposed_human_review": false},
+    {"id": "n012", "text": "Please change the delivery address and refund the order.", "proposed_team": "review", "proposed_human_review": true}
+  ],
+  "reviewer_a": null,
+  "reviewer_b": null,
+  "final_labels": null
+}

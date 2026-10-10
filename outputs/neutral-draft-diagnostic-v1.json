@@ -1,0 +1,144 @@
+{
+  "status": "draft_diagnostic_only",
+  "official_benchmark": false,
+  "label_status": "draft_pending_two_reviewers",
+  "summary": {
+    "correct_against_proposed_labels": 12,
+    "total": 12,
+    "median_latency_ms": 129.7
+  },
+  "rows": [
+    {
+      "id": "n001",
+      "text": "I do not recognize this card purchase.",
+      "proposed_team": "review",
+      "proposed_human_review": true,
+      "predicted_team": "review",
+      "predicted_action": "human_review",
+      "reason": "insufficient_or_conflicting_evidence",
+      "correct_against_draft": true,
+      "latency_ms": 388.9017080073245
+    },
+    {
+      "id": "n002",
+      "text": "Please send me a receipt for yesterday's purchase.",
+      "proposed_team": "billing",
+      "proposed_human_review": false,
+      "predicted_team": "billing",
+      "predicted_action": "route",
+      "reason": "clear_billing_document_request",
+      "correct_against_draft": true,
+      "latency_ms": 132.03804101794958
+    },
+    {
+      "id": "n003",
+      "text": "My replacement card has not arrived yet.",
+      "proposed_team": "shipping",
+      "proposed_human_review": false,
+      "predicted_team": "shipping",
+      "predicted_action": "route",
+      "reason": "clear_replacement_card_delivery_request",
+      "correct_against_draft": true,
+      "latency_ms": 128.30529201892205
+    },
+    {
+      "id": "n004",
+      "text": "I forgot my sign-in password and need to reset it.",
+      "proposed_team": "access",
+      "proposed_human_review": false,
+      "predicted_team": "access",
+      "predicted_action": "route",
+      "reason": "eligibility_and_routing_agree",
+      "correct_against_draft": true,
+      "latency_ms": 136.7292909999378
+    },
+    {
+      "id": "n005",
+      "text": "The jacket does not fit and I want to return it.",
+      "proposed_team": "returns",
+      "proposed_human_review": false,
+      "predicted_team": "returns",
+      "predicted_action": "route",
+      "reason": "clear_single_intent_returns_request",
+      "correct_against_draft": true,
+      "latency_ms": 134.12133301608264
+    },
+    {
+      "id": "n006",
+      "text": "Can I cancel a transfer that I just submitted?",
+      "proposed_team": "review",
+      "proposed_human_review": true,
+      "predicted_team": "review",
+      "predicted_action": "human_review",
+      "reason": "multiple_unresolved_requests",
+      "correct_against_draft": true,
+      "latency_ms": 127.7072090015281
+    },
+    {
+      "id": "n007",
+      "text": "The exchange rate on my cash withdrawal looks wrong.",
+      "proposed_team": "billing",
+      "proposed_human_review": false,
+      "predicted_team": "billing",
+      "predicted_action": "route",
+      "reason": "clear_cash_exchange_request",
+      "correct_against_draft": true,
+      "latency_ms": 128.44358300208114
+    },
+    {
+      "id": "n008",
+      "text": "Someone changed the recovery phone number on my account.",
+      "proposed_team": "review",
+      "proposed_human_review": true,
+      "predicted_team": "review",
+      "predicted_action": "human_review",
+      "reason": "insufficient_or_conflicting_evidence",
+      "correct_against_draft": true,
+      "latency_ms": 134.05512500321493
+    },
+    {
+      "id": "n009",
+      "text": "Why is my top-up still pending?",
+      "proposed_team": "billing",
+      "proposed_human_review": false,
+      "predicted_team": "billing",
+      "predicted_action": "route",
+      "reason": "clear_topup_status_request",
+      "correct_against_draft": true,
+      "latency_ms": 129.29762501153164
+    },
+    {
+      "id": "n010",
+      "text": "Can this card be used in another country?",
+      "proposed_team": "review",
+      "proposed_human_review": true,
+      "predicted_team": "review",
+      "predicted_action": "human_review",
+      "reason": "insufficient_or_conflicting_evidence",
+      "correct_against_draft": true,
+      "latency_ms": 128.1574169988744
+    },
+    {
+      "id": "n011",
+      "text": "My parcel tracking has not updated for three days.",
+      "proposed_team": "shipping",
+      "proposed_human_review": false,
+      "predicted_team": "shipping",
+      "predicted_action": "route",
+      "reason": "clear_single_intent_shipping_request",
+      "correct_against_draft": true,
+      "latency_ms": 127.857249986846
+    },
+    {
+      "id": "n012",
+      "text": "Please change the delivery address and refund the order.",
+      "proposed_team": "review",
+      "proposed_human_review": true,
+      "predicted_team": "review",
+      "predicted_action": "human_review",
+      "reason": "option_order_instability",
+      "correct_against_draft": true,
+      "latency_ms": 130.17450002371334
+    }
+  ]
+}

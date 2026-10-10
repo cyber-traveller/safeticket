@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "variant": "safeticket-persistent-http-client",
+  "endpoint": "http://127.0.0.1:8008/v1/systemone",
+  "model_request": "kev-latest",
+  "repetitions": 5,
+  "latency_ms": {
+    "samples": [
+      239.83004200272262,
+      56.77887500496581,
+      46.58150000614114,
+      40.460457996232435,
+      36.26308300590608
+    ],
+    "median": 46.58150000614114,
+    "min": 36.26308300590608,
+    "max": 239.83004200272262
+  },
+  "response_examples": [
+    {
+      "model": "kev-latest",
+      "answers": {
+        "department": {
+          "type": "choice",
+          "choice": "shipping",
+          "confidence": 0.1859,
+          "probabilities": {
+            "returns": 0.2615,
+            "shipping": 0.4573,
+            "billing": 0.2812
+          }
+        },
+        "escalate": {
+          "type": "noul",
+          "noul": 0.5595
+        },
+        "frustration": {
+          "type": "score",
+          "score": 1.2264,
+          "legend": {
+            "0": "Calm",
+            "1": "Frustrated",
+            "2": "Very angry"
+          },
+          "probabilities": {
+            "0": 0.0523,
+            "1": 0.669,
+            "2": 0.2787
+          },
+          "confidence": 0.5035
+        }
+      },
+      "usage": {
+        "input_tokens": 101,
+        "output_tokens": 181
+      },
+      "latency_ms": 230.5
+    },
+    {
+      "model": "kev-latest",
+      "answers": {
+        "department": {
+          "type": "choice",
+          "choice": "shipping",
+          "confidence": 0.1859,
+          "probabilities": {
+            "returns": 0.2615,
+            "shipping": 0.4573,
+            "billing": 0.2812
+          }
+        },
+        "escalate": {
+          "type": "noul",
+          "noul": 0.5595
+        },
+        "frustration": {
+          "type": "score",
+          "score": 1.2264,
+          "legend": {
+            "0": "Calm",
+            "1": "Frustrated",
+            "2": "Very angry"
+          },
+          "probabilities": {
+            "0": 0.0523,
+            "1": 0.669,
+            "2": 0.2787
+          },
+          "confidence": 0.5035
+        }
+      },
+      "usage": {
+        "input_tokens": 101,
+        "output_tokens": 181
+      },
+      "latency_ms": 54.9
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "split": "test",
+  "guarded": false,
+  "correct": 10,
+  "total": 12,
+  "accuracy": 0.8333333333333334,
+  "results": [
+    {
+      "source_id": "a01",
+      "expected": "access",
+      "predicted": "access",
+      "raw": "access",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "a02",
+      "expected": "review",
+      "predicted": "shipping",
+      "raw": "shipping",
+      "guard_reason": "independent_model",
+      "correct": false
+    },
+    {
+      "source_id": "a03",
+      "expected": "billing",
+      "predicted": "billing",
+      "raw": "billing",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "a04",
+      "expected": "review",
+      "predicted": "shipping",
+      "raw": "shipping",
+      "guard_reason": "independent_model",
+      "correct": false
+    },
+    {
+      "source_id": "a05",
+      "expected": "shipping",
+      "predicted": "shipping",
+      "raw": "shipping",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "a06",
+      "expected": "returns",
+      "predicted": "returns",
+      "raw": "returns",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "a07",
+      "expected": "returns",
+      "predicted": "returns",
+      "raw": "returns",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "a08",
+      "expected": "billing",
+      "predicted": "billing",
+      "raw": "billing",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "a09",
+      "expected": "access",
+      "predicted": "access",
+      "raw": "access",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "a10",
+      "expected": "review",
+      "predicted": "review",
+      "raw": "review",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "a11",
+      "expected": "shipping",
+      "predicted": "shipping",
+      "raw": "shipping",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "a12",
+      "expected": "review",
+      "predicted": "review",
+      "raw": "review",
+      "guard_reason": "independent_model",
+      "correct": true
+    }
+  ]
+}

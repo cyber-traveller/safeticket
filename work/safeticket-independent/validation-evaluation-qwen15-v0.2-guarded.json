@@ -1,0 +1,201 @@
+{
+  "split": "validation",
+  "guarded": true,
+  "correct": 24,
+  "total": 24,
+  "accuracy": 1.0,
+  "results": [
+    {
+      "source_id": "h01",
+      "expected": "billing",
+      "predicted": "billing",
+      "raw": "billing",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h02",
+      "expected": "billing",
+      "predicted": "billing",
+      "raw": "billing",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h03",
+      "expected": "shipping",
+      "predicted": "shipping",
+      "raw": "shipping",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h04",
+      "expected": "shipping",
+      "predicted": "shipping",
+      "raw": "shipping",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h05",
+      "expected": "returns",
+      "predicted": "returns",
+      "raw": "returns",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h06",
+      "expected": "returns",
+      "predicted": "returns",
+      "raw": "returns",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h07",
+      "expected": "access",
+      "predicted": "access",
+      "raw": "access",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h08",
+      "expected": "access",
+      "predicted": "access",
+      "raw": "access",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h09",
+      "expected": "review",
+      "predicted": "review",
+      "raw": "review",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h10",
+      "expected": "review",
+      "predicted": "review",
+      "raw": "review",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h11",
+      "expected": "review",
+      "predicted": "review",
+      "raw": "review",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h12",
+      "expected": "review",
+      "predicted": "review",
+      "raw": "review",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h13",
+      "expected": "review",
+      "predicted": "review",
+      "raw": "review",
+      "guard_reason": "independent_security_guard",
+      "correct": true
+    },
+    {
+      "source_id": "h14",
+      "expected": "review",
+      "predicted": "review",
+      "raw": "review",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h15",
+      "expected": "review",
+      "predicted": "review",
+      "raw": "access",
+      "guard_reason": "independent_security_guard",
+      "correct": true
+    },
+    {
+      "source_id": "h16",
+      "expected": "review",
+      "predicted": "review",
+      "raw": "review",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h17",
+      "expected": "billing",
+      "predicted": "billing",
+      "raw": "billing",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h18",
+      "expected": "shipping",
+      "predicted": "shipping",
+      "raw": "shipping",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h19",
+      "expected": "access",
+      "predicted": "access",
+      "raw": "access",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h20",
+      "expected": "returns",
+      "predicted": "returns",
+      "raw": "returns",
+      "guard_reason": "independent_model",
+      "correct": true
+    },
+    {
+      "source_id": "h21",
+      "expected": "billing",
+      "predicted": "billing",
+      "raw": "billing",
+      "guard_reason": "independent_injection_filtered_billing",
+      "correct": true
+    },
+    {
+      "source_id": "h22",
+      "expected": "shipping",
+      "predicted": "shipping",
+      "raw": "returns",
+      "guard_reason": "independent_injection_filtered_shipping",
+      "correct": true
+    },
+    {
+      "source_id": "h23",
+      "expected": "review",
+      "predicted": "review",
+      "raw": "billing",
+      "guard_reason": "independent_security_guard",
+      "correct": true
+    },
+    {
+      "source_id": "h24",
+      "expected": "returns",
+      "predicted": "returns",
+      "raw": "returns",
+      "guard_reason": "independent_model",
+      "correct": true
+    }
+  ]
+}

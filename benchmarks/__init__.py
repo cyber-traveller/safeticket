@@ -1,0 +1,2 @@
+"""Reproducible SafeTicket benchmark harness."""
+

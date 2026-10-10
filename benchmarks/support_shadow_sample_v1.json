@@ -1,0 +1,202 @@
+[
+  {
+    "id": "b001",
+    "ticket": "Please send the invoice for order 1001.",
+    "team": "billing"
+  },
+  {
+    "id": "b002",
+    "ticket": "Why is the charge on my statement higher than checkout?",
+    "team": "billing"
+  },
+  {
+    "id": "b003",
+    "ticket": "I need a receipt for the completed purchase.",
+    "team": "billing"
+  },
+  {
+    "id": "b004",
+    "ticket": "Please correct the billing address on my invoice.",
+    "team": "billing"
+  },
+  {
+    "id": "b005",
+    "ticket": "The same payment appears twice on my card.",
+    "team": "billing"
+  },
+  {
+    "id": "b006",
+    "ticket": "Can you explain the tax line on my bill?",
+    "team": "billing"
+  },
+  {
+    "id": "b007",
+    "ticket": "I need a VAT invoice for this order.",
+    "team": "billing"
+  },
+  {
+    "id": "b008",
+    "ticket": "Please resend my payment confirmation.",
+    "team": "billing"
+  },
+  {
+    "id": "b021",
+    "ticket": "Where is my package after the tracking stopped?",
+    "team": "shipping"
+  },
+  {
+    "id": "b022",
+    "ticket": "Please check the delivery status for order 1022.",
+    "team": "shipping"
+  },
+  {
+    "id": "b023",
+    "ticket": "My parcel is three days late.",
+    "team": "shipping"
+  },
+  {
+    "id": "b024",
+    "ticket": "The courier says delivered but I cannot find the package.",
+    "team": "shipping"
+  },
+  {
+    "id": "b025",
+    "ticket": "When will the shipment arrive?",
+    "team": "shipping"
+  },
+  {
+    "id": "b026",
+    "ticket": "Please locate the order at the sorting center.",
+    "team": "shipping"
+  },
+  {
+    "id": "b027",
+    "ticket": "I need the tracking number for my desk.",
+    "team": "shipping"
+  },
+  {
+    "id": "b028",
+    "ticket": "The delivery has not moved since Monday.",
+    "team": "shipping"
+  },
+  {
+    "id": "b041",
+    "ticket": "The shoes are too small; please exchange them.",
+    "team": "returns"
+  },
+  {
+    "id": "b042",
+    "ticket": "I want to return the damaged lamp.",
+    "team": "returns"
+  },
+  {
+    "id": "b043",
+    "ticket": "The wrong color arrived and I need a replacement.",
+    "team": "returns"
+  },
+  {
+    "id": "b044",
+    "ticket": "Please start a return for the defective keyboard.",
+    "team": "returns"
+  },
+  {
+    "id": "b045",
+    "ticket": "How do I send back the item I received?",
+    "team": "returns"
+  },
+  {
+    "id": "b046",
+    "ticket": "The delivered coat does not fit.",
+    "team": "returns"
+  },
+  {
+    "id": "b047",
+    "ticket": "I received the wrong product and want an exchange.",
+    "team": "returns"
+  },
+  {
+    "id": "b048",
+    "ticket": "Please arrange a refund for the broken mug.",
+    "team": "returns"
+  },
+  {
+    "id": "b061",
+    "ticket": "I forgot my password and cannot sign in.",
+    "team": "access"
+  },
+  {
+    "id": "b062",
+    "ticket": "Please send a password reset link.",
+    "team": "access"
+  },
+  {
+    "id": "b063",
+    "ticket": "My login is locked after too many attempts.",
+    "team": "access"
+  },
+  {
+    "id": "b064",
+    "ticket": "The verification code will not work.",
+    "team": "access"
+  },
+  {
+    "id": "b065",
+    "ticket": "I lost my phone and cannot receive the login code.",
+    "team": "access"
+  },
+  {
+    "id": "b066",
+    "ticket": "Please help me regain account access.",
+    "team": "access"
+  },
+  {
+    "id": "b067",
+    "ticket": "The sign-in email never arrives.",
+    "team": "access"
+  },
+  {
+    "id": "b068",
+    "ticket": "Unlock my account after the failed logins.",
+    "team": "access"
+  },
+  {
+    "id": "b081",
+    "ticket": "Please fix my order and also correct my invoice.",
+    "team": "review"
+  },
+  {
+    "id": "b082",
+    "ticket": "Track the package and separately return the damaged item.",
+    "team": "review"
+  },
+  {
+    "id": "b083",
+    "ticket": "Someone changed my recovery email without permission.",
+    "team": "review"
+  },
+  {
+    "id": "b084",
+    "ticket": "An unknown person accessed my account.",
+    "team": "review"
+  },
+  {
+    "id": "b085",
+    "ticket": "I see an unauthorized card transaction and need help.",
+    "team": "review"
+  },
+  {
+    "id": "b086",
+    "ticket": "A stranger placed orders from my account.",
+    "team": "review"
+  },
+  {
+    "id": "b087",
+    "ticket": "Can you investigate this complicated situation?",
+    "team": "review"
+  },
+  {
+    "id": "b088",
+    "ticket": "I need a human to review the issue.",
+    "team": "review"
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "measured_at": "2026-10-10T04:32:14.513223+00:00",
+  "endpoint": "http://127.0.0.1:8008/v1/systemone",
+  "model_request": "kev-latest",
+  "fixture_sha256": "ef216e9fa0602ed1a7e11f4e0269252d37a3769e5aea5dec46241359facfa4e3",
+  "repetitions": 5,
+  "runtime": {
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "latency_ms": {
+    "samples": [
+      3408.7175830063643,
+      46.28820800280664,
+      29.027040989603847,
+      28.01349999208469,
+      27.99270799732767
+    ],
+    "median": 29.027040989603847,
+    "min": 27.99270799732767,
+    "max": 3408.7175830063643
+  },
+  "response_examples": [
+    {
+      "model": "kev-latest",
+      "answers": {
+        "department": {
+          "type": "choice",
+          "choice": "shipping",
+          "confidence": 0.1859,
+          "probabilities": {
+            "returns": 0.2615,
+            "shipping": 0.4573,
+            "billing": 0.2812
+          }
+        },
+        "escalate": {
+          "type": "noul",
+          "noul": 0.5595
+        },
+        "frustration": {
+          "type": "score",
+          "score": 1.2264,
+          "legend": {
+            "0": "Calm",
+            "1": "Frustrated",
+            "2": "Very angry"
+          },
+          "probabilities": {
+            "0": 0.0523,
+            "1": 0.669,
+            "2": 0.2787
+          },
+          "confidence": 0.5035
+        }
+      },
+      "usage": {
+        "input_tokens": 101,
+        "output_tokens": 181
+      },
+      "latency_ms": 3350.7
+    },
+    {
+      "model": "kev-latest",
+      "answers": {
+        "department": {
+          "type": "choice",
+          "choice": "shipping",
+          "confidence": 0.1859,
+          "probabilities": {
+            "returns": 0.2615,
+            "shipping": 0.4573,
+            "billing": 0.2812
+          }
+        },
+        "escalate": {
+          "type": "noul",
+          "noul": 0.5595
+        },
+        "frustration": {
+          "type": "score",
+          "score": 1.2264,
+          "legend": {
+            "0": "Calm",
+            "1": "Frustrated",
+            "2": "Very angry"
+          },
+          "probabilities": {
+            "0": 0.0523,
+            "1": 0.669,
+            "2": 0.2787
+          },
+          "confidence": 0.5035
+        }
+      },
+      "usage": {
+        "input_tokens": 101,
+        "output_tokens": 181
+      },
+      "latency_ms": 43.3
+    }
+  ]
+}

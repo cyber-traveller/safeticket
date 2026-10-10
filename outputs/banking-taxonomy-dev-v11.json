@@ -1,0 +1,4131 @@
+{
+  "fixture": "/Users/joel/Documents/Codex/2026-10-10/referenced-chatgpt-conversation-this-is-an/benchmarks/banking77_dev_v1.json",
+  "summary": {
+    "correct": 136,
+    "total": 154,
+    "accuracy": 0.8831168831168831,
+    "by_expected": {
+      "shipping": 4,
+      "access": 24,
+      "billing": 74,
+      "review": 48,
+      "returns": 4
+    }
+  },
+  "rows": [
+    {
+      "id": "banking77-dev-card_arrival-1",
+      "ticket": "I am still waiting on my card?",
+      "source_category": "card_arrival",
+      "team": "shipping",
+      "predicted_domain": "card_lifecycle",
+      "predicted_legacy_team": "shipping",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "card_lifecycle",
+        "intent": "card_delivery",
+        "confidence": 0.84,
+        "reason": "clear_card_delivery_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "shipping",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_arrival-2",
+      "ticket": "What can I do if my card still hasn't arrived after 2 weeks?",
+      "source_category": "card_arrival",
+      "team": "shipping",
+      "predicted_domain": "card_lifecycle",
+      "predicted_legacy_team": "shipping",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "card_lifecycle",
+        "intent": "card_delivery",
+        "confidence": 0.84,
+        "reason": "clear_card_delivery_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "shipping",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_linking-1",
+      "ticket": "My card has been found. Is there any way for me to put it back into the app?",
+      "source_category": "card_linking",
+      "team": "access",
+      "predicted_domain": "card_usage",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "card_usage",
+        "intent": "card_usage_support",
+        "confidence": 0.8,
+        "reason": "clear_card_usage_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_linking-2",
+      "ticket": "I was able to find my card. How to I go about putting it into my app?",
+      "source_category": "card_linking",
+      "team": "access",
+      "predicted_domain": "card_usage",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "card_usage",
+        "intent": "card_usage_support",
+        "confidence": 0.8,
+        "reason": "clear_card_usage_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-exchange_rate-1",
+      "ticket": "What is my money worth in other countries?",
+      "source_category": "exchange_rate",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-exchange_rate-2",
+      "ticket": "Will my money be of equal value when I travel abroad?",
+      "source_category": "exchange_rate",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_payment_wrong_exchange_rate-1",
+      "ticket": "Last Saturday, I was charged extra for the exchange rate on my payment. Is something wrong?",
+      "source_category": "card_payment_wrong_exchange_rate",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_payment_wrong_exchange_rate-2",
+      "ticket": "Hi, I am disappointed to see such a bad exchange rate and hope you can assist me. Would you be able to confirm the official interbank exchange rate for me?",
+      "source_category": "card_payment_wrong_exchange_rate",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-extra_charge_on_statement-1",
+      "ticket": "Why is there an extra fee on my statement?",
+      "source_category": "extra_charge_on_statement",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-extra_charge_on_statement-2",
+      "ticket": "Why did they charge me an extra $1?",
+      "source_category": "extra_charge_on_statement",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-pending_cash_withdrawal-1",
+      "ticket": "I would like to know why a withdraw I made for some cash shows up as pending.",
+      "source_category": "pending_cash_withdrawal",
+      "team": "billing",
+      "predicted_domain": "cash",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "cash",
+        "intent": "cash_withdrawal_support",
+        "confidence": 0.82,
+        "reason": "clear_cash_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-pending_cash_withdrawal-2",
+      "ticket": "Why is my cash withdrawal still showing as pending?",
+      "source_category": "pending_cash_withdrawal",
+      "team": "billing",
+      "predicted_domain": "cash",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "cash",
+        "intent": "cash_withdrawal_support",
+        "confidence": 0.82,
+        "reason": "clear_cash_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-fiat_currency_support-1",
+      "ticket": "How many different currencies can I hold money in?",
+      "source_category": "fiat_currency_support",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-fiat_currency_support-2",
+      "ticket": "Do you allow currency exchanges?",
+      "source_category": "fiat_currency_support",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_delivery_estimate-1",
+      "ticket": "Can it specifically be delivered on a certain date?",
+      "source_category": "card_delivery_estimate",
+      "team": "shipping",
+      "predicted_domain": "card_lifecycle",
+      "predicted_legacy_team": "shipping",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "card_lifecycle",
+        "intent": "card_delivery",
+        "confidence": 0.84,
+        "reason": "clear_card_delivery_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "shipping",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_delivery_estimate-2",
+      "ticket": "I need to get my card quickly",
+      "source_category": "card_delivery_estimate",
+      "team": "shipping",
+      "predicted_domain": "card_lifecycle",
+      "predicted_legacy_team": "shipping",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "card_lifecycle",
+        "intent": "card_delivery",
+        "confidence": 0.84,
+        "reason": "clear_card_delivery_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "shipping",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-automatic_top_up-1",
+      "ticket": "Can I add money automatically to my account while traveling?",
+      "source_category": "automatic_top_up",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-automatic_top_up-2",
+      "ticket": "i need help finding the auto top up option.",
+      "source_category": "automatic_top_up",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_not_working-1",
+      "ticket": "I can't use my card because it is not working.",
+      "source_category": "card_not_working",
+      "team": "access",
+      "predicted_domain": "card_usage",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "card_usage",
+        "intent": "card_usage_support",
+        "confidence": 0.8,
+        "reason": "clear_card_usage_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_not_working-2",
+      "ticket": "I can't seem to be able to use my card",
+      "source_category": "card_not_working",
+      "team": "access",
+      "predicted_domain": "card_usage",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "card_usage",
+        "intent": "card_usage_support",
+        "confidence": 0.8,
+        "reason": "clear_card_usage_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-exchange_via_app-1",
+      "ticket": "Can I change from AUD to GBP?",
+      "source_category": "exchange_via_app",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-exchange_via_app-2",
+      "ticket": "I need to exchange between different currencies, like GBP and USD. Can I do that with your app?",
+      "source_category": "exchange_via_app",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "exchange_support",
+        "confidence": 0.8,
+        "reason": "exchange_policy",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "currency_policy"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-lost_or_stolen_card-1",
+      "ticket": "Has there been any activity on my card today?",
+      "source_category": "lost_or_stolen_card",
+      "team": "review",
+      "predicted_domain": "security",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "security",
+        "intent": "security_incident",
+        "confidence": 0.99,
+        "reason": "security_signal",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "possible_unauthorized_activity"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-lost_or_stolen_card-2",
+      "ticket": "I lost my wallet and all my cards were in it.",
+      "source_category": "lost_or_stolen_card",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-age_limit-1",
+      "ticket": "I want to open an account for my children",
+      "source_category": "age_limit",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-age_limit-2",
+      "ticket": "How old do you need to be to use the banks services?",
+      "source_category": "age_limit",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-pin_blocked-1",
+      "ticket": "I have exceeded the number of PIN attempts",
+      "source_category": "pin_blocked",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "pin_support",
+        "confidence": 0.86,
+        "reason": "clear_identity_access_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-pin_blocked-2",
+      "ticket": "I mistook my pin and now I am locked.  Can you unlock me?",
+      "source_category": "pin_blocked",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "pin_support",
+        "confidence": 0.84,
+        "reason": "pin_support_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-contactless_not_working-1",
+      "ticket": "Should i uninstall the app before i try it again?",
+      "source_category": "contactless_not_working",
+      "team": "access",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": false,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-contactless_not_working-2",
+      "ticket": "How come when I tried to pay contactless at the bus it didnt work?",
+      "source_category": "contactless_not_working",
+      "team": "access",
+      "predicted_domain": "card_usage",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "card_usage",
+        "intent": "card_usage_support",
+        "confidence": 0.8,
+        "reason": "clear_card_usage_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-top_up_by_bank_transfer_charge-1",
+      "ticket": "Is there a top up fee for transfer?",
+      "source_category": "top_up_by_bank_transfer_charge",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-top_up_by_bank_transfer_charge-2",
+      "ticket": "Will there be a charge for topping up by account with a SEPA transfer?",
+      "source_category": "top_up_by_bank_transfer_charge",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-pending_top_up-1",
+      "ticket": "How long does a top-up take to go through?",
+      "source_category": "pending_top_up",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-pending_top_up-2",
+      "ticket": "I am under the impression that my top up is still pending",
+      "source_category": "pending_top_up",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_status",
+        "confidence": 0.84,
+        "reason": "topup_status_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-cancel_transfer-1",
+      "ticket": "Cancel a transaction",
+      "source_category": "cancel_transfer",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "cancel_transfer",
+        "confidence": 0.9,
+        "reason": "cancellation_requires_review",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "irreversible_action"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-cancel_transfer-2",
+      "ticket": "Am I able to cancel a transfer I just made",
+      "source_category": "cancel_transfer",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "cancel_transfer",
+        "confidence": 0.9,
+        "reason": "cancellation_requires_review",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "irreversible_action"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-top_up_limits-1",
+      "ticket": "What is the max amount of top-ups?",
+      "source_category": "top_up_limits",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_limits",
+        "confidence": 0.86,
+        "reason": "clear_topup_limit_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-top_up_limits-2",
+      "ticket": "Are top-ups unlimited?",
+      "source_category": "top_up_limits",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_limits",
+        "confidence": 0.86,
+        "reason": "clear_topup_limit_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-wrong_amount_of_cash_received-1",
+      "ticket": "Why did I only receive a partial amount of what I tried to withdraw?",
+      "source_category": "wrong_amount_of_cash_received",
+      "team": "billing",
+      "predicted_domain": "cash",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "cash",
+        "intent": "cash_withdrawal_support",
+        "confidence": 0.82,
+        "reason": "clear_cash_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-wrong_amount_of_cash_received-2",
+      "ticket": "my atm transaction was wrong",
+      "source_category": "wrong_amount_of_cash_received",
+      "team": "billing",
+      "predicted_domain": "cash",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "cash",
+        "intent": "cash_withdrawal_support",
+        "confidence": 0.82,
+        "reason": "clear_cash_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_payment_fee_charged-1",
+      "ticket": "There was a fee charged when I paid with my card.",
+      "source_category": "card_payment_fee_charged",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_payment_fee_charged-2",
+      "ticket": "I received a fee I should not have.",
+      "source_category": "card_payment_fee_charged",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-transfer_not_received_by_recipient-1",
+      "ticket": "I am worried that too much time has gone by for a transfer to be completed.",
+      "source_category": "transfer_not_received_by_recipient",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_not_received",
+        "confidence": 0.82,
+        "reason": "transfer_delivery_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-transfer_not_received_by_recipient-2",
+      "ticket": "What is the time frame that it usually takes for a transfer to come through? I have a friend needing it immediately but it has yet to come through.",
+      "source_category": "transfer_not_received_by_recipient",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_support",
+        "confidence": 0.82,
+        "reason": "clear_transfer_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-supported_cards_and_currencies-1",
+      "ticket": "How do I use American express to top up my account?",
+      "source_category": "supported_cards_and_currencies",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-supported_cards_and_currencies-2",
+      "ticket": "Which currencies do you accept for adding money?",
+      "source_category": "supported_cards_and_currencies",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-getting_virtual_card-1",
+      "ticket": "I would like to order a virtual card, where can I get one?",
+      "source_category": "getting_virtual_card",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "virtual_card_policy",
+        "confidence": 0.78,
+        "reason": "virtual_card_policy_review",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "policy_specific"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-getting_virtual_card-2",
+      "ticket": "I need to order a new virtual card, how do I do that?",
+      "source_category": "getting_virtual_card",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "virtual_card_policy",
+        "confidence": 0.78,
+        "reason": "virtual_card_policy_review",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "policy_specific"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_acceptance-1",
+      "ticket": "Is there anywhere I can't use my card?",
+      "source_category": "card_acceptance",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_acceptance-2",
+      "ticket": "In which stores can I shop with this card?",
+      "source_category": "card_acceptance",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-top_up_reverted-1",
+      "ticket": "My top up did not show up as shown and my money has disappeared, can you help me fix this glitch problem?",
+      "source_category": "top_up_reverted",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-top_up_reverted-2",
+      "ticket": "Has my top-up been cancelled?",
+      "source_category": "top_up_reverted",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-balance_not_updated_after_cheque_or_cash_deposit-1",
+      "ticket": "Why is my last cheque deposit taking so long?",
+      "source_category": "balance_not_updated_after_cheque_or_cash_deposit",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "cash_deposit_balance",
+        "confidence": 0.82,
+        "reason": "deposit_balance_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-balance_not_updated_after_cheque_or_cash_deposit-2",
+      "ticket": "I am still waiting for a the cash I deposited this morning",
+      "source_category": "balance_not_updated_after_cheque_or_cash_deposit",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "cash_deposit_balance",
+        "confidence": 0.82,
+        "reason": "deposit_balance_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_payment_not_recognised-1",
+      "ticket": "There's a payment with my card that I didn't perform. I don't know that name shown.",
+      "source_category": "card_payment_not_recognised",
+      "team": "review",
+      "predicted_domain": "security",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "security",
+        "intent": "security_incident",
+        "confidence": 0.99,
+        "reason": "security_signal",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "possible_unauthorized_activity"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_payment_not_recognised-2",
+      "ticket": "My statement indicates I made a payment to an unfamiliar merchant.",
+      "source_category": "card_payment_not_recognised",
+      "team": "review",
+      "predicted_domain": "security",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "security",
+        "intent": "security_incident",
+        "confidence": 0.99,
+        "reason": "security_signal",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "possible_unauthorized_activity"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-edit_personal_details-1",
+      "ticket": "I am interested in changing my personal details.",
+      "source_category": "edit_personal_details",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-edit_personal_details-2",
+      "ticket": "I am here to change my adress.",
+      "source_category": "edit_personal_details",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-why_verify_identity-1",
+      "ticket": "Why do you have an identity check?",
+      "source_category": "why_verify_identity",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "identity_verification",
+        "confidence": 0.86,
+        "reason": "clear_identity_access_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-why_verify_identity-2",
+      "ticket": "I do not feel comfortable verifying my identity.",
+      "source_category": "why_verify_identity",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "identity_verification",
+        "confidence": 0.86,
+        "reason": "clear_identity_access_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-unable_to_verify_identity-1",
+      "ticket": "Can you help me with proving my identity?",
+      "source_category": "unable_to_verify_identity",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "identity_verification",
+        "confidence": 0.86,
+        "reason": "clear_identity_access_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-unable_to_verify_identity-2",
+      "ticket": "What proof do you need for my identification?",
+      "source_category": "unable_to_verify_identity",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "identity_verification",
+        "confidence": 0.86,
+        "reason": "clear_identity_access_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-get_physical_card-1",
+      "ticket": "I'm not sure what to do about the PIN, because I don't have one yet.",
+      "source_category": "get_physical_card",
+      "team": "review",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": false,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "pin_support",
+        "confidence": 0.86,
+        "reason": "clear_identity_access_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-get_physical_card-2",
+      "ticket": "Is my PIN sent separably?",
+      "source_category": "get_physical_card",
+      "team": "review",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": false,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "pin_support",
+        "confidence": 0.86,
+        "reason": "clear_identity_access_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-visa_or_mastercard-1",
+      "ticket": "Is there a way I can have a mastercard?",
+      "source_category": "visa_or_mastercard",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-visa_or_mastercard-2",
+      "ticket": "is it just visa or can i also use mastercard?",
+      "source_category": "visa_or_mastercard",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-topping_up_by_card-1",
+      "ticket": "My money I had was gone and I could not get gas!",
+      "source_category": "topping_up_by_card",
+      "team": "billing",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": false,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-topping_up_by_card-2",
+      "ticket": "i can not see my top up",
+      "source_category": "topping_up_by_card",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-disposable_card_limits-1",
+      "ticket": "Do the disposable cards have any restrictions on them?",
+      "source_category": "disposable_card_limits",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-disposable_card_limits-2",
+      "ticket": "How many times can I use a virtual card?",
+      "source_category": "disposable_card_limits",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "virtual_card_policy",
+        "confidence": 0.78,
+        "reason": "virtual_card_policy_review",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "policy_specific"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-compromised_card-1",
+      "ticket": "I think someone is using my card without my permission!",
+      "source_category": "compromised_card",
+      "team": "review",
+      "predicted_domain": "security",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "security",
+        "intent": "security_incident",
+        "confidence": 0.99,
+        "reason": "security_signal",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "possible_unauthorized_activity"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-compromised_card-2",
+      "ticket": "What do I do if I detect fraudulent use on my car?",
+      "source_category": "compromised_card",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-atm_support-1",
+      "ticket": "I can use this card at which ATMs?",
+      "source_category": "atm_support",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "atm_support",
+        "confidence": 0.82,
+        "reason": "atm_policy_review",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "policy_specific"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-atm_support-2",
+      "ticket": "Can I use the card at any cash machine?",
+      "source_category": "atm_support",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "atm_support",
+        "confidence": 0.82,
+        "reason": "atm_policy_review",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "policy_specific"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-direct_debit_payment_not_recognised-1",
+      "ticket": "Hi, i found a large amount payment in my old statements which i am sure was not made by me. I am aware that the time has passed but is there a way to raise a dispute for this payment now?",
+      "source_category": "direct_debit_payment_not_recognised",
+      "team": "review",
+      "predicted_domain": "security",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "security",
+        "intent": "security_incident",
+        "confidence": 0.99,
+        "reason": "security_signal",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "possible_unauthorized_activity"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-direct_debit_payment_not_recognised-2",
+      "ticket": "what is the word?",
+      "source_category": "direct_debit_payment_not_recognised",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-passcode_forgotten-1",
+      "ticket": "Help me!  I don't know what my password is.",
+      "source_category": "passcode_forgotten",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "account_access",
+        "confidence": 0.86,
+        "reason": "clear_identity_access_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-passcode_forgotten-2",
+      "ticket": "I thought I knew my password but I guess I was wrong, what can I do now?",
+      "source_category": "passcode_forgotten",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "account_access",
+        "confidence": 0.86,
+        "reason": "clear_identity_access_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-declined_cash_withdrawal-1",
+      "ticket": "I tried to withdraw cash and got declined, why is that?",
+      "source_category": "declined_cash_withdrawal",
+      "team": "billing",
+      "predicted_domain": "cash",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "cash",
+        "intent": "declined_cash_withdrawal",
+        "confidence": 0.86,
+        "reason": "declined_cash_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-declined_cash_withdrawal-2",
+      "ticket": "Why was I declined when I tried to get my money?",
+      "source_category": "declined_cash_withdrawal",
+      "team": "billing",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": false,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-pending_card_payment-1",
+      "ticket": "What does it mean when a payment is pending?",
+      "source_category": "pending_card_payment",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-pending_card_payment-2",
+      "ticket": "Could you please tell me why my purchases from this morning say payment is pending?",
+      "source_category": "pending_card_payment",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-lost_or_stolen_phone-1",
+      "ticket": "My phone was stolen, what should I do first?",
+      "source_category": "lost_or_stolen_phone",
+      "team": "review",
+      "predicted_domain": "security",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "security",
+        "intent": "security_incident",
+        "confidence": 0.99,
+        "reason": "security_signal",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "possible_unauthorized_activity"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-lost_or_stolen_phone-2",
+      "ticket": "My phone was stolen, what should I do?",
+      "source_category": "lost_or_stolen_phone",
+      "team": "review",
+      "predicted_domain": "security",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "security",
+        "intent": "security_incident",
+        "confidence": 0.99,
+        "reason": "security_signal",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "possible_unauthorized_activity"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-request_refund-1",
+      "ticket": "How long does it take to get a refund on something I bought?",
+      "source_category": "request_refund",
+      "team": "returns",
+      "predicted_domain": "refunds",
+      "predicted_legacy_team": "returns",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "refunds",
+        "intent": "refund_support",
+        "confidence": 0.84,
+        "reason": "clear_refund_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "returns",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-request_refund-2",
+      "ticket": "Please tell me how to get a refund for something I bought.",
+      "source_category": "request_refund",
+      "team": "returns",
+      "predicted_domain": "refunds",
+      "predicted_legacy_team": "returns",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "refunds",
+        "intent": "refund_support",
+        "confidence": 0.84,
+        "reason": "clear_refund_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "returns",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-declined_transfer-1",
+      "ticket": "Transfer unable to be completed, states 'declined'",
+      "source_category": "declined_transfer",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_not_received",
+        "confidence": 0.82,
+        "reason": "transfer_delivery_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-declined_transfer-2",
+      "ticket": "Why was my transfer request decline?",
+      "source_category": "declined_transfer",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_support",
+        "confidence": 0.82,
+        "reason": "clear_transfer_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-Refund_not_showing_up-1",
+      "ticket": "I don't see my refund money yet in my account. I asked the merchant a while ago for a refund, so I don't know what's taking so long.  Can you look into it and see if the money is there, just not in my account yet?",
+      "source_category": "Refund_not_showing_up",
+      "team": "returns",
+      "predicted_domain": "refunds",
+      "predicted_legacy_team": "returns",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "refunds",
+        "intent": "refund_support",
+        "confidence": 0.84,
+        "reason": "clear_refund_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "returns",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-Refund_not_showing_up-2",
+      "ticket": "Why am I missing my refund",
+      "source_category": "Refund_not_showing_up",
+      "team": "returns",
+      "predicted_domain": "refunds",
+      "predicted_legacy_team": "returns",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "refunds",
+        "intent": "refund_support",
+        "confidence": 0.84,
+        "reason": "clear_refund_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "returns",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-declined_card_payment-1",
+      "ticket": "I'm not sure why my card didn't work",
+      "source_category": "declined_card_payment",
+      "team": "billing",
+      "predicted_domain": "card_usage",
+      "predicted_legacy_team": "access",
+      "correct": false,
+      "result": {
+        "action": "route",
+        "domain": "card_usage",
+        "intent": "card_usage_support",
+        "confidence": 0.8,
+        "reason": "clear_card_usage_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-declined_card_payment-2",
+      "ticket": "My card is not working at stores.",
+      "source_category": "declined_card_payment",
+      "team": "billing",
+      "predicted_domain": "card_usage",
+      "predicted_legacy_team": "access",
+      "correct": false,
+      "result": {
+        "action": "route",
+        "domain": "card_usage",
+        "intent": "card_usage_support",
+        "confidence": 0.8,
+        "reason": "clear_card_usage_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-pending_transfer-1",
+      "ticket": "i put in money for vacation and its not showing. i need that money today, how long will it take",
+      "source_category": "pending_transfer",
+      "team": "billing",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": false,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-pending_transfer-2",
+      "ticket": "I can't figure out why a transfer is still pending?",
+      "source_category": "pending_transfer",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_support",
+        "confidence": 0.82,
+        "reason": "clear_transfer_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-terminate_account-1",
+      "ticket": "How do I deactivate my account?",
+      "source_category": "terminate_account",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-terminate_account-2",
+      "ticket": "Remove my account immediately.",
+      "source_category": "terminate_account",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_swallowed-1",
+      "ticket": "What do I do if the ATM took my card?",
+      "source_category": "card_swallowed",
+      "team": "review",
+      "predicted_domain": "security",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "security",
+        "intent": "security_incident",
+        "confidence": 0.99,
+        "reason": "security_signal",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "possible_account_takeover"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_swallowed-2",
+      "ticket": "What do I do now my credit card has been swallowed by the ATM?",
+      "source_category": "card_swallowed",
+      "team": "review",
+      "predicted_domain": "security",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "security",
+        "intent": "security_incident",
+        "confidence": 0.99,
+        "reason": "security_signal",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "possible_account_takeover"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-transaction_charged_twice-1",
+      "ticket": "A transaction shows duplicate times.",
+      "source_category": "transaction_charged_twice",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-transaction_charged_twice-2",
+      "ticket": "There is a repeat charge for the same item",
+      "source_category": "transaction_charged_twice",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-verify_source_of_funds-1",
+      "ticket": "where exactly does money come from",
+      "source_category": "verify_source_of_funds",
+      "team": "access",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": false,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-verify_source_of_funds-2",
+      "ticket": "Where did my money come from?",
+      "source_category": "verify_source_of_funds",
+      "team": "access",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": false,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-transfer_timing-1",
+      "ticket": "How long am I to wait before the transfer gets to my account?",
+      "source_category": "transfer_timing",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_support",
+        "confidence": 0.82,
+        "reason": "clear_transfer_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-transfer_timing-2",
+      "ticket": "Will the transfer show up in my account soon?",
+      "source_category": "transfer_timing",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_support",
+        "confidence": 0.82,
+        "reason": "clear_transfer_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-reverted_card_payment?-1",
+      "ticket": "I wanted to purchase something online but the payment was returned back to me. This has been going on for a couple of weeks. Please tell me what is going on here?",
+      "source_category": "reverted_card_payment?",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-reverted_card_payment?-2",
+      "ticket": "I tried to use my debit card, but the payment did not work.",
+      "source_category": "reverted_card_payment?",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-change_pin-1",
+      "ticket": "Is it possible for me to change my PIN number?",
+      "source_category": "change_pin",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "pin_support",
+        "confidence": 0.84,
+        "reason": "pin_support_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-change_pin-2",
+      "ticket": "What are the steps to change my PIN to something else?",
+      "source_category": "change_pin",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "pin_support",
+        "confidence": 0.84,
+        "reason": "pin_support_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-beneficiary_not_allowed-1",
+      "ticket": "is there something blocking me from making transfers",
+      "source_category": "beneficiary_not_allowed",
+      "team": "billing",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": false,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-beneficiary_not_allowed-2",
+      "ticket": "What are the reasons for my beneficiary not being allowed?",
+      "source_category": "beneficiary_not_allowed",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_support",
+        "confidence": 0.82,
+        "reason": "clear_transfer_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-transfer_fee_charged-1",
+      "ticket": "I was transferring some money to a friend, which I thought would be free, but I see there is a charge.  What's up with that?",
+      "source_category": "transfer_fee_charged",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-transfer_fee_charged-2",
+      "ticket": "There is a fee for a transfer, please explain that to me.",
+      "source_category": "transfer_fee_charged",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_support",
+        "confidence": 0.82,
+        "reason": "clear_transfer_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-receiving_money-1",
+      "ticket": "Can my salary be received here?",
+      "source_category": "receiving_money",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_support",
+        "confidence": 0.82,
+        "reason": "clear_transfer_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-receiving_money-2",
+      "ticket": "How can my boss pay me directly to the card?",
+      "source_category": "receiving_money",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-failed_transfer-1",
+      "ticket": "What is happening?  I have tried to transfer money 5x already.  Is the system down?  This shouldnt be happening as this is a basic transfer.",
+      "source_category": "failed_transfer",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_support",
+        "confidence": 0.82,
+        "reason": "clear_transfer_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-failed_transfer-2",
+      "ticket": "Is there a reason that my transfer failed?",
+      "source_category": "failed_transfer",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_support",
+        "confidence": 0.82,
+        "reason": "clear_transfer_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-transfer_into_account-1",
+      "ticket": "I want to transfer money. How do I do that for my account?",
+      "source_category": "transfer_into_account",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_support",
+        "confidence": 0.82,
+        "reason": "clear_transfer_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-transfer_into_account-2",
+      "ticket": "How do I transfer money into my account?",
+      "source_category": "transfer_into_account",
+      "team": "billing",
+      "predicted_domain": "transfers",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "transfers",
+        "intent": "transfer_support",
+        "confidence": 0.82,
+        "reason": "clear_transfer_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-verify_top_up-1",
+      "ticket": "Do you know how I can verify that I did a top-up to my card?",
+      "source_category": "verify_top_up",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "identity_verification",
+        "confidence": 0.86,
+        "reason": "clear_identity_access_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-verify_top_up-2",
+      "ticket": "where is the code for verifying the top up card?",
+      "source_category": "verify_top_up",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "identity_verification",
+        "confidence": 0.86,
+        "reason": "clear_identity_access_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-getting_spare_card-1",
+      "ticket": "Are extra charges added for sending out additional cards?",
+      "source_category": "getting_spare_card",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-getting_spare_card-2",
+      "ticket": "I'd like to order an additional card",
+      "source_category": "getting_spare_card",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "physical_card_order",
+        "confidence": 0.88,
+        "reason": "physical_card_policy",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "card_order"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-top_up_by_cash_or_cheque-1",
+      "ticket": "Help me please, I need to top up cash.",
+      "source_category": "top_up_by_cash_or_cheque",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-top_up_by_cash_or_cheque-2",
+      "ticket": "Do you have any options to top up with a cheque on my account?",
+      "source_category": "top_up_by_cash_or_cheque",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-order_physical_card-1",
+      "ticket": "How much does it cost for a physical card?",
+      "source_category": "order_physical_card",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "physical_card_order",
+        "confidence": 0.88,
+        "reason": "physical_card_policy",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "card_order"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-order_physical_card-2",
+      "ticket": "Where can the cards be delivered?",
+      "source_category": "order_physical_card",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-virtual_card_not_working-1",
+      "ticket": "Why isn't my disposable virtual card working?",
+      "source_category": "virtual_card_not_working",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "virtual_card_failure",
+        "confidence": 0.84,
+        "reason": "virtual_card_failure_review",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "card_failure"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-virtual_card_not_working-2",
+      "ticket": "Can I use my virtual card to complete transactions for memberships?",
+      "source_category": "virtual_card_not_working",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "virtual_card_policy",
+        "confidence": 0.78,
+        "reason": "virtual_card_policy_review",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "policy_specific"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-wrong_exchange_rate_for_cash_withdrawal-1",
+      "ticket": "The wrong exchange rate was applied to me while pulling out cash.",
+      "source_category": "wrong_exchange_rate_for_cash_withdrawal",
+      "team": "billing",
+      "predicted_domain": "cash",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "cash",
+        "intent": "cash_exchange_rate",
+        "confidence": 0.82,
+        "reason": "cash_exchange_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-wrong_exchange_rate_for_cash_withdrawal-2",
+      "ticket": "I got less cash because of the exchange rate.",
+      "source_category": "wrong_exchange_rate_for_cash_withdrawal",
+      "team": "billing",
+      "predicted_domain": "cash",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "cash",
+        "intent": "cash_exchange_rate",
+        "confidence": 0.82,
+        "reason": "cash_exchange_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-get_disposable_virtual_card-1",
+      "ticket": "What do you use disposable cards on?",
+      "source_category": "get_disposable_virtual_card",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-get_disposable_virtual_card-2",
+      "ticket": "How do I get a disposable virtual card as well?",
+      "source_category": "get_disposable_virtual_card",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "virtual_card_policy",
+        "confidence": 0.78,
+        "reason": "virtual_card_policy_review",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "policy_specific"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-top_up_failed-1",
+      "ticket": "I think my top-up has failed.",
+      "source_category": "top_up_failed",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_status",
+        "confidence": 0.84,
+        "reason": "topup_status_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-top_up_failed-2",
+      "ticket": "Top-up is not working",
+      "source_category": "top_up_failed",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-balance_not_updated_after_bank_transfer-1",
+      "ticket": "help my money isnt showing up",
+      "source_category": "balance_not_updated_after_bank_transfer",
+      "team": "billing",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": false,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-balance_not_updated_after_bank_transfer-2",
+      "ticket": "how do i see what i transferred",
+      "source_category": "balance_not_updated_after_bank_transfer",
+      "team": "billing",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": false,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-cash_withdrawal_not_recognised-1",
+      "ticket": "I looked on the app and it says I withdrew cash.  I didn't!",
+      "source_category": "cash_withdrawal_not_recognised",
+      "team": "access",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": false,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-cash_withdrawal_not_recognised-2",
+      "ticket": "I didn't withdraw the amount of cash that is showing up in the app.",
+      "source_category": "cash_withdrawal_not_recognised",
+      "team": "access",
+      "predicted_domain": "cash",
+      "predicted_legacy_team": "billing",
+      "correct": false,
+      "result": {
+        "action": "route",
+        "domain": "cash",
+        "intent": "cash_withdrawal_support",
+        "confidence": 0.82,
+        "reason": "clear_cash_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-exchange_charge-1",
+      "ticket": "How much is the exchange fee?",
+      "source_category": "exchange_charge",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-exchange_charge-2",
+      "ticket": "Are there any hidden extra fees for currency exchanges?",
+      "source_category": "exchange_charge",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-top_up_by_card_charge-1",
+      "ticket": "What is the charge for using a Top up card in the US?",
+      "source_category": "top_up_by_card_charge",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-top_up_by_card_charge-2",
+      "ticket": "What is the fee for topping up a US card?",
+      "source_category": "top_up_by_card_charge",
+      "team": "billing",
+      "predicted_domain": "topups",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "topups",
+        "intent": "topup_support",
+        "confidence": 0.82,
+        "reason": "clear_topup_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-activate_my_card-1",
+      "ticket": "Please help me with my card.  It won't activate.",
+      "source_category": "activate_my_card",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "activate_card",
+        "confidence": 0.9,
+        "reason": "card_activation_review",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "card_state_change"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-activate_my_card-2",
+      "ticket": "I tired but an unable to activate my card.",
+      "source_category": "activate_my_card",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "activate_card",
+        "confidence": 0.9,
+        "reason": "card_activation_review",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "card_state_change"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-cash_withdrawal_charge-1",
+      "ticket": "Why is there a charge when I took out money?",
+      "source_category": "cash_withdrawal_charge",
+      "team": "billing",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-cash_withdrawal_charge-2",
+      "ticket": "Why have I been charged a fee for cash withdrawal?",
+      "source_category": "cash_withdrawal_charge",
+      "team": "billing",
+      "predicted_domain": "cash",
+      "predicted_legacy_team": "billing",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "cash",
+        "intent": "cash_withdrawal_support",
+        "confidence": 0.82,
+        "reason": "clear_cash_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_about_to_expire-1",
+      "ticket": "Are there any express fees if i want my new card faster?",
+      "source_category": "card_about_to_expire",
+      "team": "review",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": false,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-card_about_to_expire-2",
+      "ticket": "Do I need to do something to get a new card once it expires?",
+      "source_category": "card_about_to_expire",
+      "team": "review",
+      "predicted_domain": "payments",
+      "predicted_legacy_team": "billing",
+      "correct": false,
+      "result": {
+        "action": "route",
+        "domain": "payments",
+        "intent": "payment_support",
+        "confidence": 0.8,
+        "reason": "clear_payment_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "billing",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-apple_pay_or_google_pay-1",
+      "ticket": "Hi, I have an apple watch. How do I use it to top up my card?",
+      "source_category": "apple_pay_or_google_pay",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "mobile_wallet_support",
+        "confidence": 0.88,
+        "reason": "mobile_wallet_policy",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "wallet_policy"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-apple_pay_or_google_pay-2",
+      "ticket": "Can I use google pay to top up?",
+      "source_category": "apple_pay_or_google_pay",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "mobile_wallet_support",
+        "confidence": 0.88,
+        "reason": "mobile_wallet_policy",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "wallet_policy"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-verify_my_identity-1",
+      "ticket": "What do you require for identity verification?",
+      "source_category": "verify_my_identity",
+      "team": "access",
+      "predicted_domain": "identity_access",
+      "predicted_legacy_team": "access",
+      "correct": true,
+      "result": {
+        "action": "route",
+        "domain": "identity_access",
+        "intent": "identity_verification",
+        "confidence": 0.86,
+        "reason": "clear_identity_access_signal",
+        "safety": {
+          "requires_human": false,
+          "signals": []
+        },
+        "legacy_team": "access",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-verify_my_identity-2",
+      "ticket": "How can I prove I am me?",
+      "source_category": "verify_my_identity",
+      "team": "access",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": false,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-country_support-1",
+      "ticket": "Which countries are you available in?",
+      "source_category": "country_support",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "country_support",
+        "confidence": 0.8,
+        "reason": "country_policy",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "eligibility_policy"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    },
+    {
+      "id": "banking77-dev-country_support-2",
+      "ticket": "Where are you cards supported?",
+      "source_category": "country_support",
+      "team": "review",
+      "predicted_domain": "review",
+      "predicted_legacy_team": "review",
+      "correct": true,
+      "result": {
+        "action": "human_review",
+        "domain": "review",
+        "intent": "ambiguous_request",
+        "confidence": 0.6,
+        "reason": "no_safe_taxonomy_match",
+        "safety": {
+          "requires_human": true,
+          "signals": [
+            "ambiguous_request"
+          ]
+        },
+        "legacy_team": "review",
+        "taxonomy": {
+          "name": "safeticket-banking-v1",
+          "experimental": true,
+          "trained_model": false
+        }
+      }
+    }
+  ]
+}

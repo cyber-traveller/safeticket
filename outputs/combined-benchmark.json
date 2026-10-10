@@ -1,0 +1,95 @@
+{
+  "tasks": [
+    {
+      "name": "customer-support routing",
+      "cases": 24,
+      "questions": "team action under the fixed support-v2 policy",
+      "source": "comparison-*.json"
+    },
+    {
+      "name": "product-review comprehension",
+      "cases": 18,
+      "questions": "sentiment, recommendation, satisfaction",
+      "source": "reviews-*.json"
+    }
+  ],
+  "results": [
+    {
+      "backend": "SafeTicket / Kev backend",
+      "support_correct": 24,
+      "support_total": 24,
+      "support_automatic_routes": 15,
+      "support_automatic_errors": 0,
+      "support_reviews_caught": 9,
+      "support_reviews_total": 9,
+      "review_correct": 17,
+      "review_total": 18,
+      "review_individual_correct": 53,
+      "review_individual_total": 54,
+      "replay": {
+        "policy_correct": 24,
+        "total": 24,
+        "automatic_routes": 15,
+        "automatic_errors": 0,
+        "required_reviews_caught": 9,
+        "required_reviews": 9,
+        "unnecessary_reviews": 0
+      }
+    },
+    {
+      "backend": "Laya English",
+      "support_correct": 17,
+      "support_total": 24,
+      "support_automatic_routes": 10,
+      "support_automatic_errors": 2,
+      "support_reviews_caught": 9,
+      "support_reviews_total": 9,
+      "review_correct": 14,
+      "review_total": 18,
+      "review_individual_correct": 49,
+      "review_individual_total": 54,
+      "replay": {
+        "policy_correct": 19,
+        "total": 24,
+        "automatic_routes": 11,
+        "automatic_errors": 1,
+        "required_reviews_caught": 9,
+        "required_reviews": 9,
+        "unnecessary_reviews": 4
+      }
+    },
+    {
+      "backend": "Laya typed-decisions",
+      "support_correct": 15,
+      "support_total": 24,
+      "support_automatic_routes": 6,
+      "support_automatic_errors": 0,
+      "support_reviews_caught": 9,
+      "support_reviews_total": 9,
+      "review_correct": 16,
+      "review_total": 18,
+      "review_individual_correct": 51,
+      "review_individual_total": 54,
+      "replay": {
+        "policy_correct": 19,
+        "total": 24,
+        "automatic_routes": 10,
+        "automatic_errors": 0,
+        "required_reviews_caught": 9,
+        "required_reviews": 9,
+        "unnecessary_reviews": 5
+      }
+    }
+  ],
+  "interpretation": "SafeTicket / Kev backend scores highest on both frozen synthetic tasks, but this is not a neutral ranking: the prompts and support policy were developed on Kev, and the other backends run under that same policy. The support score includes the same SafeTicket review policy applied to every backend; support automatic-route errors and review coverage are reported separately. The review score counts a case correct only when all three judgments are correct.",
+  "limitations": "42 authored English synthetic cases total. Prompts and the support policy were developed on Kev, so this is not a neutral model leaderboard. Cases are not customer data, not independent samples for each question, and not sufficient to establish general superiority. SafeTicket still uses Kev weights. Latencies are excluded because backends use different transports and runtimes.",
+  "replay_note": "Support columns above are the recorded results. The replay table applies the current support-v2 policy (2026-10-10) to the same frozen model outputs with no new inference; policy rules were adjusted after seeing the n12, n14 and n15 failures, so replay results are no longer an untouched test.",
+  "artifacts": [
+    "outputs/comparison-kev.json",
+    "outputs/comparison-english.json",
+    "outputs/comparison-typed-decisions.json",
+    "outputs/reviews-safeticket.json",
+    "outputs/reviews-english.json",
+    "outputs/reviews-typed-decisions.json"
+  ]
+}

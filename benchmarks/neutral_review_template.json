@@ -1,0 +1,24 @@
+{
+  "queue": "neutral_review_queue_v1.json",
+  "reviewer": null,
+  "independent": true,
+  "labels": {
+    "n001": null,
+    "n002": null,
+    "n003": null,
+    "n004": null,
+    "n005": null,
+    "n006": null,
+    "n007": null,
+    "n008": null,
+    "n009": null,
+    "n010": null,
+    "n011": null,
+    "n012": null
+  },
+  "label_format": {
+    "team": "billing|shipping|returns|access|review",
+    "human_review": true,
+    "rationale": "Short independent explanation"
+  }
+}

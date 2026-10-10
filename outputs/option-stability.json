@@ -1,0 +1,1498 @@
+{
+  "backend": "jaredpalmer/kev-0.8b@v1.0",
+  "permutations": 2,
+  "cases": 24,
+  "unstable_cases": 0,
+  "max_spread": 0.12260000000000004,
+  "rows": [
+    {
+      "id": "n01",
+      "expected": "billing",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.0199,
+      "spread": {
+        "shipping": 0.0199,
+        "review": 0.0010000000000000009,
+        "billing": 0.0015000000000000013,
+        "returns": 0.017700000000000007,
+        "access": 0.0002999999999999999
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0705,
+              "shipping": 0.085,
+              "returns": 0.0894,
+              "access": 0.0044,
+              "review": 0.7507
+            },
+            "choice": "review",
+            "latency_ms": 240.4
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.1071,
+              "shipping": 0.0651,
+              "billing": 0.072,
+              "review": 0.7517,
+              "access": 0.0041
+            },
+            "choice": "review",
+            "latency_ms": 25.7
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.0015000000000000013,
+          "shipping": 0.0199,
+          "returns": 0.017700000000000007,
+          "access": 0.0002999999999999999,
+          "review": 0.0010000000000000009
+        }
+      }
+    },
+    {
+      "id": "n02",
+      "expected": "billing",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.034499999999999975,
+      "spread": {
+        "shipping": 0.0011999999999999997,
+        "review": 0.0315,
+        "billing": 0.034499999999999975,
+        "returns": 0.0043,
+        "access": 0.00019999999999999987
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.7631,
+              "shipping": 0.0091,
+              "returns": 0.0147,
+              "access": 0.0018,
+              "review": 0.2114
+            },
+            "choice": "billing",
+            "latency_ms": 42.9
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.019,
+              "shipping": 0.0079,
+              "billing": 0.7286,
+              "review": 0.2429,
+              "access": 0.0016
+            },
+            "choice": "billing",
+            "latency_ms": 24.3
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.034499999999999975,
+          "shipping": 0.0011999999999999997,
+          "returns": 0.0043,
+          "access": 0.00019999999999999987,
+          "review": 0.0315
+        }
+      }
+    },
+    {
+      "id": "n03",
+      "expected": "billing",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.0034000000000000696,
+      "spread": {
+        "shipping": 0.0007999999999999999,
+        "review": 0.0017000000000000001,
+        "billing": 0.0034000000000000696,
+        "returns": 0.0007999999999999999,
+        "access": 0.0002
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.9601,
+              "shipping": 0.0017,
+              "returns": 0.0029,
+              "access": 0.0004,
+              "review": 0.0349
+            },
+            "choice": "billing",
+            "latency_ms": 42.3
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0021,
+              "shipping": 0.0009,
+              "billing": 0.9635,
+              "review": 0.0332,
+              "access": 0.0002
+            },
+            "choice": "billing",
+            "latency_ms": 24.4
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.0034000000000000696,
+          "shipping": 0.0007999999999999999,
+          "returns": 0.0007999999999999999,
+          "access": 0.0002,
+          "review": 0.0017000000000000001
+        }
+      }
+    },
+    {
+      "id": "n04",
+      "expected": "shipping",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.02220000000000001,
+      "spread": {
+        "shipping": 0.02210000000000001,
+        "review": 0.02220000000000001,
+        "billing": 0.00010000000000000005,
+        "returns": 0.00019999999999999966,
+        "access": 0.00019999999999999998
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0006,
+              "shipping": 0.9121,
+              "returns": 0.0065,
+              "access": 0.0007,
+              "review": 0.0802
+            },
+            "choice": "shipping",
+            "latency_ms": 41.6
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0063,
+              "shipping": 0.89,
+              "billing": 0.0007,
+              "review": 0.1024,
+              "access": 0.0005
+            },
+            "choice": "shipping",
+            "latency_ms": 27.3
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.00010000000000000005,
+          "shipping": 0.02210000000000001,
+          "returns": 0.00019999999999999966,
+          "access": 0.00019999999999999998,
+          "review": 0.02220000000000001
+        }
+      }
+    },
+    {
+      "id": "n05",
+      "expected": "shipping",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.10460000000000003,
+      "spread": {
+        "shipping": 0.10460000000000003,
+        "review": 0.09880000000000003,
+        "billing": 0.0007000000000000001,
+        "returns": 0.0044,
+        "access": 0.0005
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0018,
+              "shipping": 0.8131,
+              "returns": 0.007,
+              "access": 0.0015,
+              "review": 0.1767
+            },
+            "choice": "shipping",
+            "latency_ms": 43.2
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0114,
+              "shipping": 0.7085,
+              "billing": 0.0025,
+              "review": 0.2755,
+              "access": 0.002
+            },
+            "choice": "shipping",
+            "latency_ms": 25.8
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.0007000000000000001,
+          "shipping": 0.10460000000000003,
+          "returns": 0.0044,
+          "access": 0.0005,
+          "review": 0.09880000000000003
+        }
+      }
+    },
+    {
+      "id": "n06",
+      "expected": "returns",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.024600000000000066,
+      "spread": {
+        "shipping": 0.0016000000000000007,
+        "review": 0.02260000000000001,
+        "billing": 0.00019999999999999987,
+        "returns": 0.024600000000000066,
+        "access": 0.00019999999999999998
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.001,
+              "shipping": 0.0148,
+              "returns": 0.9141,
+              "access": 0.0005,
+              "review": 0.0696
+            },
+            "choice": "returns",
+            "latency_ms": 43.7
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.8895,
+              "shipping": 0.0164,
+              "billing": 0.0012,
+              "review": 0.0922,
+              "access": 0.0007
+            },
+            "choice": "returns",
+            "latency_ms": 27.1
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.00019999999999999987,
+          "shipping": 0.0016000000000000007,
+          "returns": 0.024600000000000066,
+          "access": 0.00019999999999999998,
+          "review": 0.02260000000000001
+        }
+      }
+    },
+    {
+      "id": "n07",
+      "expected": "returns",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.0276,
+      "spread": {
+        "shipping": 0.0007000000000000001,
+        "review": 0.0276,
+        "billing": 9.999999999999983e-05,
+        "returns": 0.027100000000000013,
+        "access": 0.00019999999999999998
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0022,
+              "shipping": 0.0052,
+              "returns": 0.8827,
+              "access": 0.0008,
+              "review": 0.109
+            },
+            "choice": "returns",
+            "latency_ms": 42.0
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.8556,
+              "shipping": 0.0045,
+              "billing": 0.0023,
+              "review": 0.1366,
+              "access": 0.001
+            },
+            "choice": "returns",
+            "latency_ms": 24.7
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 9.999999999999983e-05,
+          "shipping": 0.0007000000000000001,
+          "returns": 0.027100000000000013,
+          "access": 0.00019999999999999998,
+          "review": 0.0276
+        }
+      }
+    },
+    {
+      "id": "n08",
+      "expected": "access",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.009900000000000006,
+      "spread": {
+        "shipping": 0.00039999999999999996,
+        "review": 0.009900000000000006,
+        "billing": 0.00010000000000000005,
+        "returns": 0.0005999999999999998,
+        "access": 0.009000000000000008
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0006,
+              "shipping": 0.0017,
+              "returns": 0.0028,
+              "access": 0.9152,
+              "review": 0.0797
+            },
+            "choice": "access",
+            "latency_ms": 38.5
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0022,
+              "shipping": 0.0013,
+              "billing": 0.0007,
+              "review": 0.0896,
+              "access": 0.9062
+            },
+            "choice": "access",
+            "latency_ms": 24.9
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.00010000000000000005,
+          "shipping": 0.00039999999999999996,
+          "returns": 0.0005999999999999998,
+          "access": 0.009000000000000008,
+          "review": 0.009900000000000006
+        }
+      }
+    },
+    {
+      "id": "n09",
+      "expected": "access",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.020899999999999988,
+      "spread": {
+        "shipping": 0.00039999999999999996,
+        "review": 0.020899999999999988,
+        "billing": 0.0,
+        "returns": 9.999999999999983e-05,
+        "access": 0.020500000000000074
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0009,
+              "shipping": 0.0023,
+              "returns": 0.0034,
+              "access": 0.8958,
+              "review": 0.0976
+            },
+            "choice": "access",
+            "latency_ms": 38.6
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0033,
+              "shipping": 0.0019,
+              "billing": 0.0009,
+              "review": 0.1185,
+              "access": 0.8753
+            },
+            "choice": "access",
+            "latency_ms": 24.5
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.0,
+          "shipping": 0.00039999999999999996,
+          "returns": 9.999999999999983e-05,
+          "access": 0.020500000000000074,
+          "review": 0.020899999999999988
+        }
+      }
+    },
+    {
+      "id": "n10",
+      "expected": "review",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.028100000000000014,
+      "spread": {
+        "shipping": 0.015600000000000003,
+        "review": 0.028100000000000014,
+        "billing": 0.00010000000000000026,
+        "returns": 0.006600000000000009,
+        "access": 0.0057
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0071,
+              "shipping": 0.0618,
+              "returns": 0.0844,
+              "access": 0.029,
+              "review": 0.8176
+            },
+            "choice": "review",
+            "latency_ms": 36.1
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0778,
+              "shipping": 0.0462,
+              "billing": 0.007,
+              "review": 0.8457,
+              "access": 0.0233
+            },
+            "choice": "review",
+            "latency_ms": 24.9
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.00010000000000000026,
+          "shipping": 0.015600000000000003,
+          "returns": 0.006600000000000009,
+          "access": 0.0057,
+          "review": 0.028100000000000014
+        }
+      }
+    },
+    {
+      "id": "n11",
+      "expected": "review",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.027200000000000002,
+      "spread": {
+        "shipping": 0.027200000000000002,
+        "review": 0.015100000000000002,
+        "billing": 0.0007999999999999986,
+        "returns": 0.014900000000000004,
+        "access": 0.003599999999999999
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0171,
+              "shipping": 0.0919,
+              "returns": 0.0399,
+              "access": 0.0178,
+              "review": 0.8333
+            },
+            "choice": "review",
+            "latency_ms": 36.5
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0548,
+              "shipping": 0.0647,
+              "billing": 0.0179,
+              "review": 0.8484,
+              "access": 0.0142
+            },
+            "choice": "review",
+            "latency_ms": 25.9
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.0007999999999999986,
+          "shipping": 0.027200000000000002,
+          "returns": 0.014900000000000004,
+          "access": 0.003599999999999999,
+          "review": 0.015100000000000002
+        }
+      }
+    },
+    {
+      "id": "n12",
+      "expected": "review",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.12260000000000004,
+      "spread": {
+        "shipping": 0.09970000000000001,
+        "review": 0.02999999999999997,
+        "billing": 0.12260000000000004,
+        "returns": 0.007300000000000001,
+        "access": 0.0002000000000000001
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.3313,
+              "shipping": 0.2962,
+              "returns": 0.0447,
+              "access": 0.0026,
+              "review": 0.3252
+            },
+            "choice": "billing",
+            "latency_ms": 42.5
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.052,
+              "shipping": 0.1965,
+              "billing": 0.4539,
+              "review": 0.2952,
+              "access": 0.0024
+            },
+            "choice": "billing",
+            "latency_ms": 27.3
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.12260000000000004,
+          "shipping": 0.09970000000000001,
+          "returns": 0.007300000000000001,
+          "access": 0.0002000000000000001,
+          "review": 0.02999999999999997
+        }
+      }
+    },
+    {
+      "id": "n13",
+      "expected": "review",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.07550000000000001,
+      "spread": {
+        "shipping": 0.0023999999999999994,
+        "review": 0.00040000000000001146,
+        "billing": 0.00019999999999999966,
+        "returns": 0.0726,
+        "access": 0.07550000000000001
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0024,
+              "shipping": 0.0183,
+              "returns": 0.3427,
+              "access": 0.3679,
+              "review": 0.2687
+            },
+            "choice": "access",
+            "latency_ms": 43.4
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.2701,
+              "shipping": 0.0159,
+              "billing": 0.0022,
+              "review": 0.2683,
+              "access": 0.4434
+            },
+            "choice": "access",
+            "latency_ms": 25.2
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.00019999999999999966,
+          "shipping": 0.0023999999999999994,
+          "returns": 0.0726,
+          "access": 0.07550000000000001,
+          "review": 0.00040000000000001146
+        }
+      }
+    },
+    {
+      "id": "n14",
+      "expected": "review",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.034900000000000014,
+      "spread": {
+        "shipping": 0.0242,
+        "review": 0.034900000000000014,
+        "billing": 9.999999999999983e-05,
+        "returns": 0.010799999999999976,
+        "access": 0.00010000000000000005
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0016,
+              "shipping": 0.5293,
+              "returns": 0.2895,
+              "access": 0.0009,
+              "review": 0.1787
+            },
+            "choice": "shipping",
+            "latency_ms": 42.6
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.2787,
+              "shipping": 0.5051,
+              "billing": 0.0017,
+              "review": 0.2136,
+              "access": 0.001
+            },
+            "choice": "shipping",
+            "latency_ms": 24.0
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 9.999999999999983e-05,
+          "shipping": 0.0242,
+          "returns": 0.010799999999999976,
+          "access": 0.00010000000000000005,
+          "review": 0.034900000000000014
+        }
+      }
+    },
+    {
+      "id": "n15",
+      "expected": "review",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.0685,
+      "spread": {
+        "shipping": 0.00010000000000000026,
+        "review": 0.0673,
+        "billing": 0.0005999999999999998,
+        "returns": 0.0005000000000000004,
+        "access": 0.0685
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0018,
+              "shipping": 0.0043,
+              "returns": 0.0056,
+              "access": 0.8355,
+              "review": 0.1528
+            },
+            "choice": "access",
+            "latency_ms": 40.5
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0061,
+              "shipping": 0.0044,
+              "billing": 0.0024,
+              "review": 0.2201,
+              "access": 0.767
+            },
+            "choice": "access",
+            "latency_ms": 24.3
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.0005999999999999998,
+          "shipping": 0.00010000000000000026,
+          "returns": 0.0005000000000000004,
+          "access": 0.0685,
+          "review": 0.0673
+        }
+      }
+    },
+    {
+      "id": "n16",
+      "expected": "review",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.035800000000000054,
+      "spread": {
+        "shipping": 0.0346,
+        "review": 0.035800000000000054,
+        "billing": 0.01629999999999998,
+        "returns": 0.015200000000000005,
+        "access": 9.999999999999983e-05
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.3015,
+              "shipping": 0.0591,
+              "returns": 0.0377,
+              "access": 0.0028,
+              "review": 0.599
+            },
+            "choice": "review",
+            "latency_ms": 39.8
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0529,
+              "shipping": 0.0245,
+              "billing": 0.2852,
+              "review": 0.6348,
+              "access": 0.0027
+            },
+            "choice": "review",
+            "latency_ms": 24.8
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.01629999999999998,
+          "shipping": 0.0346,
+          "returns": 0.015200000000000005,
+          "access": 9.999999999999983e-05,
+          "review": 0.035800000000000054
+        }
+      }
+    },
+    {
+      "id": "n17",
+      "expected": "review",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.030299999999999994,
+      "spread": {
+        "shipping": 0.019500000000000003,
+        "review": 0.011400000000000077,
+        "billing": 0.030299999999999994,
+        "returns": 0.018000000000000002,
+        "access": 0.017400000000000006
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0659,
+              "shipping": 0.0698,
+              "returns": 0.0629,
+              "access": 0.0609,
+              "review": 0.7405
+            },
+            "choice": "review",
+            "latency_ms": 40.5
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0809,
+              "shipping": 0.0503,
+              "billing": 0.0962,
+              "review": 0.7291,
+              "access": 0.0435
+            },
+            "choice": "review",
+            "latency_ms": 26.4
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.030299999999999994,
+          "shipping": 0.019500000000000003,
+          "returns": 0.018000000000000002,
+          "access": 0.017400000000000006,
+          "review": 0.011400000000000077
+        }
+      }
+    },
+    {
+      "id": "n18",
+      "expected": "billing",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.06810000000000001,
+      "spread": {
+        "shipping": 0.050199999999999995,
+        "review": 0.006000000000000005,
+        "billing": 0.03389999999999999,
+        "returns": 0.06810000000000001,
+        "access": 0.057800000000000004
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0618,
+              "shipping": 0.2113,
+              "returns": 0.1181,
+              "access": 0.1738,
+              "review": 0.4351
+            },
+            "choice": "review",
+            "latency_ms": 44.7
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.1862,
+              "shipping": 0.1611,
+              "billing": 0.0957,
+              "review": 0.4411,
+              "access": 0.116
+            },
+            "choice": "review",
+            "latency_ms": 25.5
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.03389999999999999,
+          "shipping": 0.050199999999999995,
+          "returns": 0.06810000000000001,
+          "access": 0.057800000000000004,
+          "review": 0.006000000000000005
+        }
+      }
+    },
+    {
+      "id": "n19",
+      "expected": "shipping",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.0663999999999999,
+      "spread": {
+        "shipping": 0.0663999999999999,
+        "review": 0.05000000000000002,
+        "billing": 0.011899999999999999,
+        "returns": 0.004799999999999999,
+        "access": 0.0002000000000000001
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0112,
+              "shipping": 0.819,
+              "returns": 0.0085,
+              "access": 0.0027,
+              "review": 0.1586
+            },
+            "choice": "shipping",
+            "latency_ms": 43.2
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0133,
+              "shipping": 0.7526,
+              "billing": 0.0231,
+              "review": 0.2086,
+              "access": 0.0025
+            },
+            "choice": "shipping",
+            "latency_ms": 26.8
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.011899999999999999,
+          "shipping": 0.0663999999999999,
+          "returns": 0.004799999999999999,
+          "access": 0.0002000000000000001,
+          "review": 0.05000000000000002
+        }
+      }
+    },
+    {
+      "id": "n20",
+      "expected": "returns",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.010300000000000004,
+      "spread": {
+        "shipping": 0.004,
+        "review": 0.010300000000000004,
+        "billing": 0.0002000000000000001,
+        "returns": 0.0048000000000000265,
+        "access": 0.0016999999999999993
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0013,
+              "shipping": 0.0205,
+              "returns": 0.8924,
+              "access": 0.0093,
+              "review": 0.0765
+            },
+            "choice": "returns",
+            "latency_ms": 51.7
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.8876,
+              "shipping": 0.0165,
+              "billing": 0.0015,
+              "review": 0.0868,
+              "access": 0.0076
+            },
+            "choice": "returns",
+            "latency_ms": 26.6
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.0002000000000000001,
+          "shipping": 0.004,
+          "returns": 0.0048000000000000265,
+          "access": 0.0016999999999999993,
+          "review": 0.010300000000000004
+        }
+      }
+    },
+    {
+      "id": "n21",
+      "expected": "access",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.021299999999999986,
+      "spread": {
+        "shipping": 0.001599999999999999,
+        "review": 0.0189,
+        "billing": 0.00030000000000000014,
+        "returns": 0.0007000000000000005,
+        "access": 0.021299999999999986
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0013,
+              "shipping": 0.0088,
+              "returns": 0.0034,
+              "access": 0.8809,
+              "review": 0.1055
+            },
+            "choice": "access",
+            "latency_ms": 39.5
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0041,
+              "shipping": 0.0104,
+              "billing": 0.0016,
+              "review": 0.1244,
+              "access": 0.8596
+            },
+            "choice": "access",
+            "latency_ms": 26.7
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.00030000000000000014,
+          "shipping": 0.001599999999999999,
+          "returns": 0.0007000000000000005,
+          "access": 0.021299999999999986,
+          "review": 0.0189
+        }
+      }
+    },
+    {
+      "id": "n22",
+      "expected": "billing",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.039900000000000005,
+      "spread": {
+        "shipping": 0.039900000000000005,
+        "review": 0.0036999999999999256,
+        "billing": 0.02840000000000001,
+        "returns": 0.008600000000000003,
+        "access": 0.0008999999999999998
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.1041,
+              "shipping": 0.1257,
+              "returns": 0.0394,
+              "access": 0.0096,
+              "review": 0.7213
+            },
+            "choice": "review",
+            "latency_ms": 44.8
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.048,
+              "shipping": 0.0858,
+              "billing": 0.1325,
+              "review": 0.725,
+              "access": 0.0087
+            },
+            "choice": "review",
+            "latency_ms": 25.6
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.02840000000000001,
+          "shipping": 0.039900000000000005,
+          "returns": 0.008600000000000003,
+          "access": 0.0008999999999999998,
+          "review": 0.0036999999999999256
+        }
+      }
+    },
+    {
+      "id": "n23",
+      "expected": "shipping",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.122,
+      "spread": {
+        "shipping": 0.122,
+        "review": 0.07890000000000003,
+        "billing": 0.0233,
+        "returns": 0.0202,
+        "access": 0.0004999999999999996
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0416,
+              "shipping": 0.6605,
+              "returns": 0.0219,
+              "access": 0.0046,
+              "review": 0.2714
+            },
+            "choice": "shipping",
+            "latency_ms": 41.7
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0421,
+              "shipping": 0.5385,
+              "billing": 0.0649,
+              "review": 0.3503,
+              "access": 0.0041
+            },
+            "choice": "shipping",
+            "latency_ms": 27.1
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.0233,
+          "shipping": 0.122,
+          "returns": 0.0202,
+          "access": 0.0004999999999999996,
+          "review": 0.07890000000000003
+        }
+      }
+    },
+    {
+      "id": "n24",
+      "expected": "review",
+      "runs": 2,
+      "argmax_stable": true,
+      "max_probability_spread": 0.06540000000000001,
+      "spread": {
+        "shipping": 0.029700000000000004,
+        "review": 0.06540000000000001,
+        "billing": 0.003299999999999999,
+        "returns": 0.0029,
+        "access": 0.04189999999999999
+      },
+      "raw": {
+        "runs": [
+          {
+            "order": [
+              "billing",
+              "shipping",
+              "returns",
+              "access",
+              "review"
+            ],
+            "probabilities": {
+              "billing": 0.0063,
+              "shipping": 0.2645,
+              "returns": 0.0193,
+              "access": 0.3523,
+              "review": 0.3575
+            },
+            "choice": "review",
+            "latency_ms": 48.6
+          },
+          {
+            "order": [
+              "returns",
+              "shipping",
+              "billing",
+              "review",
+              "access"
+            ],
+            "probabilities": {
+              "returns": 0.0222,
+              "shipping": 0.2348,
+              "billing": 0.0096,
+              "review": 0.4229,
+              "access": 0.3104
+            },
+            "choice": "review",
+            "latency_ms": 25.7
+          }
+        ],
+        "argmax_stable": true,
+        "spread": {
+          "billing": 0.003299999999999999,
+          "shipping": 0.029700000000000004,
+          "returns": 0.0029,
+          "access": 0.04189999999999999,
+          "review": 0.06540000000000001
+        }
+      }
+    }
+  ],
+  "limitations": "24 synthetic tickets; two option orders; diagnostic robustness audit, not an accuracy benchmark."
+}

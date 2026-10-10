@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "safeticket"
 version = "0.1.0"
-description = "Reproducible benchmark harness for an independently branded decision engine"
+description = "Local support-ticket routing API with human-review safety gates, plus a reproducible benchmark harness"
 requires-python = ">=3.12,<3.14"
 license = "Apache-2.0"
 readme = "README.md"

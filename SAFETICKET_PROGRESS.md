@@ -4,8 +4,8 @@ Updated: 2026-10-10
 
 ## Project goal
 
-SafeTicket is an independently branded, open-source decision engine intended to make
-cautious, typed support decisions locally. The project began by studying the
+SafeTicket is an open-source decision engine intended to make cautious, typed
+support decisions locally. The project began by studying the
 public Kev repository and its API shape, while preserving required attribution
 and avoiding unsupported claims of original model training.
 

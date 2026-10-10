@@ -8,7 +8,7 @@ SafeTicket contains original benchmark and validation harness code by the SafeTi
 The project was designed after inspecting the publicly available Kev project:
 <https://github.com/jaredpalmer/kev>, Copyright 2026 Jared Palmer, licensed
 under the Apache License, Version 2.0. No Kev source code or model weights are
-included in this initial scaffold.
+included in this repository.
 
 If upstream Kev code or artifacts are added later, their original notices and
 licenses must be included alongside the relevant distribution.
